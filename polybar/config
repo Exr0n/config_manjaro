@@ -1,0 +1,138 @@
+[settings]
+screenchange-reload = true ; https://www.reddit.com/r/i3wm/comments/6lo0z0/how_to_use_polybar/djvp7ok
+fixed-center = true
+
+[bar/mybar]
+bottom = true
+dock = false
+width = 100%
+height = 32
+offset-x = 0
+offset-y = 0
+padding = 1
+
+font-0 = Iosevka Term SS12
+font-1 = FontAwesome
+
+dim-value = 0.8
+
+modules-left = i3
+modules-center = 
+modules-right = clock memory cpu
+
+tray-position = right
+tray-maxsize = 20
+tray-padding = 1
+
+[module/clock]
+type = internal/date
+interval = 0.5
+date = "%a %d %b"
+time = "%T"
+
+label = "%date% %time%"
+
+[module/memory]
+;; from https://github.com/nicomazz/i3-polybar-config/blob/master/polybar/config
+;type = internal/memory
+;format = <label> <bar-used>
+;label = RAM
+;
+;bar-used-width = 30
+;bar-used-foreground-0 = #aaff77
+;bar-used-foreground-1 = #aaff77
+;bar-used-foreground-2 = #fba922
+;bar-used-foreground-3 = #ff5555
+;bar-used-indicator = |
+;bar-used-indicator-font = 6
+;bar-used-indicator-foreground = #ff
+;bar-used-fill = ─
+;bar-used-fill-font = 6
+;bar-used-empty = ─
+;bar-used-empty-font = 6
+;bar-used-empty-foreground = #444444
+[module/memory]
+; {{{
+    ; from https://gist.github.com/zanshin/b77630faa36e11bd01052884fc9c4fb4
+type = internal/memory
+interval = 2
+label =   %percentage_used:2%
+label-underline = #4bffdc
+
+;format = <label> <bar-used>
+format = <label>
+;label = RAM
+
+bar-used-width = 30
+bar-used-foreground-0 = #aaff77
+bar-used-foreground-1 = #aaff77
+bar-used-foreground-2 = #fba922
+bar-used-foreground-3 = #ff5555
+bar-used-indicator = |
+bar-used-indicator-foreground = #ff
+bar-used-indicator-font = 3
+bar-used-fill = =
+bar-used-fill-font = 3
+bar-used-empty = ─
+bar-used-empty-font = 3
+bar-used-empty-foreground = #444444
+; }}}
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = CPU
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
+
+[module/i3]
+; https://github.com/polybar/polybar/wiki/Module:-i3
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+enable-click = true
+
+; name, icon, index, or output
+label-focused = %icon%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 4
+
+label-unfocused = %icon%
+label-unfocused-padding = 4
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 4
+
+; some config from https://github.com/nicomazz/i3-polybar-config/blob/master/polybar/config
+; Separator in between workspaces
+label-separator = |
+label-separator-padding = 1
+label-separator-foreground = #ffb52a

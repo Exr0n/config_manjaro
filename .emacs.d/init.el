@@ -166,7 +166,7 @@
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;;; font
-(set-face-attribute 'default nil :height 220)
+(set-face-attribute 'default nil :height 180)
 (set-face-attribute 'default t :font "Iosevka Term SS12" :weight 'light)
 ;; (set-face-attribute 'default t :font "Iosevka Term SS12" :weight 'light)
 ;; (set-face-attribute 'default t :font "Hack Nerd Font" :weight 'light)
@@ -239,7 +239,7 @@
 (add-hook 'org-mode-hook  (lambda ()
 							(flyspell-mode t)))
 ;; start at inbox
-(setq initial-buffer-choice (concat (getenv "HOME") "/materials/capsule/org/inbox.org"))
+(setq initial-buffer-choice (concat (getenv "HOME") "/org/inbox.org"))
 
 ;; evil things
 (use-package evil-org		; https://github.com/Somelauw/evil-org-mode

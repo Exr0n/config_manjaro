@@ -15,3 +15,11 @@ ln -s $HOME/.config/xinitrc ~/.xinitrc
 ln -s $HOME/.config/xbindkeysrc ~/.xbindkeysrc
 ```
 
+# other things to do
+## github
+- remember to generate an ssh and gpg key for accessing repos and signing commits
+- install extensions
+    - dark reader
+    - surfingkeys
+    - tamper monkey + force youtube 30fps
+    - youtube speed changer (the top right corner one)

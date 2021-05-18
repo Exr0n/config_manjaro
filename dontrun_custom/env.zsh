@@ -23,7 +23,7 @@ export PATH="/usr/local/Cellar/llvm/10.0.0_1/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
-export PATH="$ZSH_CUSTOM/../scripts/wabt/bin:$PATH"
+export PATH="$HOME/.config/scripts/wabt/bin:$PATH"
 
 if [[ `uname` != "Darwin" ]]; then
     # linuxbrew
@@ -34,7 +34,7 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 # custom bin
-export PATH="$ZSH_CUSTOM/bin:$PATH"
+export PATH="$HOME/.config/bin:$PATH"
 
 # alacritty
 export PATH="$ZSH_CUSTOM/../dontrun_custom/Alacritty.app/Contents/MacOS:$PATH"

@@ -12,7 +12,7 @@ offset-y = 0
 padding = 1
 
 font-0 = Iosevka Term SS12
-font-1 = FontAwesome
+font-1 = NotoSansMono
 
 dim-value = 0.8
 
@@ -56,8 +56,8 @@ label = "%date% %time%"
     ; from https://gist.github.com/zanshin/b77630faa36e11bd01052884fc9c4fb4
 type = internal/memory
 interval = 2
-label =   %percentage_used:2%
-label-underline = #4bffdc
+label = ﲭ %percentage_used:2%
+;label-underline = #4bffdc
 
 ;format = <label> <bar-used>
 format = <label>

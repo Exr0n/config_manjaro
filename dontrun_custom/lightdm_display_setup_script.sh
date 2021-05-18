@@ -1,0 +1,1 @@
+nvidia-settings --assign CurrentMetaMode="DP-0: nvidia-auto-select +0+240 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}" && xrandr --output DP-0 --primary && xrandr --output HDMI-0 --rotate left # monitors

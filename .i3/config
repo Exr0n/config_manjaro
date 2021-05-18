@@ -143,7 +143,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 A
+set $ws1 A  # TODO: set emoji tagnames
 set $ws2 B
 set $ws3 C
 set $ws4 D
@@ -155,7 +155,7 @@ set $ws15 5
 set $ws16 6
 set $ws17 7
 set $ws18 8
-set $ws19 8
+set $ws19 9
 
 # switch to workspace
 bindsym $mod+apostrophe workspace $ws1
@@ -247,6 +247,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
+bindsym $mod+s exec --no-startup-id xset dpms force off
 bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
@@ -298,6 +299,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+exec --no-startup-id emacs --daemon
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia

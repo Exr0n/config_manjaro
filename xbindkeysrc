@@ -41,6 +41,6 @@
 "/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Down"
     Mod4 + j
 "/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Up"
-    Alt + k
+    Mod4 + k
 "/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Down"
-    Alt + j
+    Mod4 + j

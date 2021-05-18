@@ -53,6 +53,7 @@ export XDG_DATA_HOME="$HOME/.data"
 export ZSH_CUSTOM="$CONFIG/zsh_custom"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 export EDITOR="nvim"
+export BROWSER="/usr/bin/brave"
 #   vim stuff
 export VIMROOT="$CONFIG/nvim"
 export VIMCONFIG="$VIMROOT"

@@ -12,7 +12,7 @@
 #nvidia-settings --assign CurrentMetaMode="DP-1-4: nvidia-auto-select +0+250 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"
 
 # display attempt 3 charlie choogachoo
-nvidia-settings --assign CurrentMetaMode="DP-0: nvidia-auto-select +0+240 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}" && xrandr --output HDMI-0 --rotate left # monitors
+nvidia-settings --assign CurrentMetaMode="DP-0: nvidia-auto-select +0+240 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}" && xrandr --output DP-0 --primary && xrandr --output HDMI-0 --rotate left # monitors
 #nvidia-settings --assign CurrentMetaMode="DP-1: nvidia-auto-select +1920+240 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}" && xrandr --output HDMI-0 --rotate left
 #xrandr --output HDMI-0 --scale 0.5
 

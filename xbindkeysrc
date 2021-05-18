@@ -1,6 +1,6 @@
 # scripts
 "~/.config/dontrun_custom/rebind_keys.zsh"
-    Mod4 + Super_L + g
+    Mod4 + g
 
 "~/.config/zsh_custom/bin/alt_active_setvar.zsh"
     Mod4 + c
@@ -10,20 +10,20 @@
 
 # homerow (apps + slep)
 #brave --incognito
-"firefox --private-window"
-    Mod4 + d
-
-"firefox"
-    Mod4 + h
-
-"/bin/alacritty"
-    Mod4 + t
-
-"emacsclient -nc -a=''"
-    Mod4 + n
-
-"sleep 0.2; xset dpms force off"
-    Mod4 + s
+#"firefox --private-window"
+#    Mod4 + d
+#
+#"firefox"
+#    Mod4 + h
+#
+#"/bin/alacritty"
+#    Mod4 + t
+#
+#"emacsclient -nc -a=''"
+#    Mod4 + n
+#
+#"sleep 0.2; xset dpms force off"
+#    Mod4 + s
 
 # arrowkeys TODO not working
 "/bin/xdotool key --clearmodifiers --window $(xdotool getactivewindow) Up"

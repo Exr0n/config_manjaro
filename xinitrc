@@ -1,4 +1,4 @@
-~/.config/zsh_custom/bin/rebind_keys.zsh
+~/.config/dontrun_custom/rebind_keys.zsh
 
 # monitors
 #nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}, DP-5: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}"
@@ -21,18 +21,16 @@ nvidia-settings --assign CurrentMetaMode="DP-0: nvidia-auto-select +0+240 {Force
 #syncthingtray &
 #syncthing &
 #aw-qt &
-dex -a&
-slstatus &
+#dex -a&
+#slstatus &
 emacs --daemon
 eval $(ssh-agent)
 xbindkeys -f ~/.config/xbindkeysrc
 
 # scripts
 cd /home/exr0n/projects/Taproot
-pwd > ~/.data/taproot_log.txt 
 ./command.sh >> ~/.data/taproot_log.txt 2>&1 &
-cd /
-pwd >> ~/.data/taproot_log.txt 
+cd -
 
 # multilingual keyboard support
 export GTK_IM_MODULE=fcitx
@@ -54,6 +52,6 @@ xset +fp /usr/share/fonts/local,/usr/share/fonts/TTF
 # go!
 #exec i3
 #xcompmgr&
-slstatus&
-exec dwm
+#slstatus&
+#exec dwm
 

@@ -8,9 +8,9 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # polybar -rq dummy &
-polybar -c config.ini -rq music &
-polybar -c config.ini -rq tray &
-polybar -c config.ini -rq i3 &
+polybar -c $HOME/.config/polybar/config.ini -rq status &
+polybar -c $HOME/.config/polybar/config.ini -rq tray &
+polybar -c $HOME/.config/polybar/config.ini -rq i3 &
 
 echo "Polybar launched..."
 

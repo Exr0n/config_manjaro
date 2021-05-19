@@ -11,6 +11,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar -c $HOME/.config/polybar/config.ini -rq status &
 polybar -c $HOME/.config/polybar/config.ini -rq tray &
 polybar -c $HOME/.config/polybar/config.ini -rq i3 &
+polybar -c $HOME/.config/polybar/config.ini -rq status_vertmon &
 
 echo "Polybar launched..."
 

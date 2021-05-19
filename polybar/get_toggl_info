@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+duration="$(eval "echo $(date -ud "@$(( $(date +'%s') - $(cat $HOME/.data/pit2ya/current.start) ))" +'$([[ $((%s/3600/24)) -gt 0 ]] && echo "$((%s/3600/24)) day$([[ $((%s/3600/24)) -eq 1 ]] || echo 's' ), ")%T')")"
+
+color="$(cat $HOME/.data/pit2ya/current.color)"
+
+echo -n "%{B$color}   $duration $(cat $HOME/.data/pit2ya/current.desc)  "
+

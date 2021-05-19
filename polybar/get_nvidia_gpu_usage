@@ -1,0 +1,26 @@
+# depends on nvidia-smi
+
+output=$(nvidia-smi --query-gpu='utilization.gpu,utilization.memory' --format=csv,noheader,nounits | sed -e 's/, /,/g')
+
+get_ramp_bar() {
+    if   [[ 1 -eq "$(echo "$1 < 12.5" | bc)" ]]; then echo -n "%{F#aaff77}▁"
+    elif [[ 1 -eq "$(echo "$1 < 25  " | bc)" ]]; then echo -n "%{F#aaff77}▂"
+    elif [[ 1 -eq "$(echo "$1 < 37.5" | bc)" ]]; then echo -n "%{F#aaff77}▃"
+    elif [[ 1 -eq "$(echo "$1 < 50  " | bc)" ]]; then echo -n "%{F#aaff77}▄"
+    elif [[ 1 -eq "$(echo "$1 < 62.5" | bc)" ]]; then echo -n "%{F#fba922}▅"
+    elif [[ 1 -eq "$(echo "$1 < 75  " | bc)" ]]; then echo -n "%{F#fba922}▆"
+    elif [[ 1 -eq "$(echo "$1 < 87.5" | bc)" ]]; then echo -n "%{F#ff5555}▇"
+    else                                              echo -n "%{F#cc0000}█"
+    fi
+}
+
+get_ramps () {
+    echo -n "$(get_ramp_bar $1)$(get_ramp_bar $2) "
+}
+
+for line in $output; do
+    get_ramps $(echo $line | tr , ' ')
+done
+
+
+

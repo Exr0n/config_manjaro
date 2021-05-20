@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-alias italics='echo -e "\e[3mitalics?\e[0m"' # TODO: REMOVE
+alias check_italics='echo -e "\e[3mitalics?\e[0m"'
 
 #source /home/exr0n/.config/dontrun_custom/env.zsh
 

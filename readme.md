@@ -15,6 +15,11 @@ ln -s $HOME/.config/xinitrc ~/.xinitrc
 ln -s $HOME/.config/xbindkeysrc ~/.xbindkeysrc
 ln -s $HOME/.config/.emacs.d ~
 ln -s $HOME/.config/.Xresources ~
+
+# enable time/date syncing
+sudo systemctl enable systemd-timesyncd.service
+timedatectl set-ntp true
+timedatectl status # used to check if syncing is enabled
 ```
 
 # other things to do
@@ -31,6 +36,7 @@ ln -s $HOME/.config/.Xresources ~
 
 ## bluetooth
 - load the btusb kernel module (check with `lsmod | ag btusb`, load with `sudo modprobe btusb`)
+- enable it `sudo systemctl enable bluetooth` (apparently might have to off-then-on it in the bios)
 
 # some useful commands
 - Lots of info: `inxi -Fxz`

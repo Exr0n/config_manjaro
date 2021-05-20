@@ -1,6 +1,6 @@
 ```sh
 sudo pacman -S yay
-yay -S alacritty yarn rustup gcc neofetch coreutils neovim the_silver_searcher zsh hyperfine wget tree ffmpeg fzf cmake go brave ttf-iosevka-term-ss12 xbindkeys xcape nvidia-settings python-pip discord certbot unzip xclip tig syncthing activitywatch polybar ttf-material-design-icons lunar-client bat mpd bottom jq colorpicker cmatrix
+yay -S alacritty yarn rustup gcc neofetch coreutils neovim the_silver_searcher zsh hyperfine wget tree ffmpeg fzf cmake go brave ttf-iosevka-term-ss12 xbindkeys xcape nvidia-settings python-pip discord certbot unzip xclip tig syncthing activitywatch polybar ttf-material-design-icons lunar-client bat mpd bottom jq colorpicker cmatrix bluez bluez-utils blueman
 chsh -s $(which zsh)
 
 # nvidia pain
@@ -26,5 +26,11 @@ ln -s $HOME/.config/.Xresources ~
     - tamper monkey + force youtube 30fps
     - youtube speed changer (the top right corner one)
 
-## /etc
+## slash etc
 - fstab! see dontrun_custom/fstab to /etc/fstab
+
+## bluetooth
+- load the btusb kernel module (check with `lsmod | ag btusb`, load with `sudo modprobe btusb`)
+
+# some useful commands
+- Lots of info: `inxi -Fxz`

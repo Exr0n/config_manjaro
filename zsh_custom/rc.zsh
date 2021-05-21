@@ -61,9 +61,9 @@ alias mux='tmuxinator'
 
 #    toggl
 alias tl='pym toggl'
-alias t='pit2ya_crt; date +"%s" > $XDG_DATA_HOME/pit2ya/current.start; pym toggl projects get $(pym toggl now | ag Project: | cut "-d " -f 2) | ag "Hex color: #" | cut "-d " -f3 > $XDG_DATA_HOME/pit2ya/current.color' # github.com/exr0nprojects/pit2ya
+alias t='pit2ya_crt' # github.com/exr0nprojects/pit2ya
 alias tt='t && slep'
-alias pt='pit2ya_mod; pym toggl projects get $(pym toggl now | ag Project: | cut "-d " -f 2) | ag "Hex color: #" | cut "-d " -f3 > $XDG_DATA_HOME/pit2ya/current.color'
+alias pt='pit2ya_mod'
 #alias t='tl continue "$(tl -s ls -f description | tail -n +2 | fzf)"'
 #alias tg='tl ls -f id,description,start,duration | tail -n +2 | fzf | cut -d" " -f 2'
 #alias  t='tl continue "$(tl ls -f description | tail -n +2 | fzf)"'

@@ -1,12 +1,20 @@
 ```sh
 sudo pacman -S yay
-yay -S alacritty yarn rustup gcc neofetch coreutils neovim the_silver_searcher zsh hyperfine wget tree ffmpeg fzf cmake go brave ttf-iosevka-term-ss12 xbindkeys xcape nvidia-settings python-pip discord certbot unzip xclip tig syncthing activitywatch polybar ttf-material-design-icons lunar-client bat mpd bottom jq colorpicker cmatrix bluez bluez-utils blueman
+yay -S alacritty rustup gcc neovim zsh cmake go brave xbindkeys xcape nvidia-settings python-pip discord certbot syncthing activitywatch colorpicker okular ispell aspell
+yay -S polybar mpd conky
+yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-iosevka-aile
+yay -S pandoc xelatex texlive-most
+yay -S bluez bluez-utils blueman
+yay -S neofetch bottom cmatrix cowsay
+yay -S coreutils yarn the_silver_searcher hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq
+yay -S lunar-client
+yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
 
 # nvidia pain
 #yay -S linux510-nvidia
 #            ^^^ replace with linux kernel version! (maybe) 5.10 -> 510 DOESNT WORK
-# instead, on manjaro, use 
+# instead, on manjaro, use
 sudo mhwd -a pci nofree 0300
 
 # ln -s A BUNCH OF STUFF
@@ -20,6 +28,12 @@ ln -s $HOME/.config/.Xresources ~
 sudo systemctl enable systemd-timesyncd.service
 timedatectl set-ntp true
 timedatectl status # used to check if syncing is enabled
+
+# uncomplicated firewall (ufw)
+sudo ufw enable
+sudo ufw allow <ports> # corsaur.us http and https, ssh, mc
+
+pym pip install pit2ya==0.3.9 # or whichever the latest version is
 ```
 
 # other things to do

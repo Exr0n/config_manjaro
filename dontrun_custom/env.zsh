@@ -43,6 +43,11 @@ export PATH="$ZSH_CUSTOM/../dontrun_custom/Alacritty.app/Contents/MacOS:$PATH"
 # compilation include paths
 export CPLUS_INCLUDE_PATH="$XDG_CONFIG_HOME/include/cpp:$C_INCLUDE_PATH"
 
+# https://slmeng.medium.com/18b68d2817e7
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODULES=@im=fcitx
+
 # Zsh Completions (https://medium.com/@beatrizmrg/gaining-efficiency-with-iterm-prompt-customization-on-macos-3ad212f5bfde)
 # shouldn't need this with zsh-autosuggest # fpath=(/usr/local/share/zsh-completions $fpath)
 

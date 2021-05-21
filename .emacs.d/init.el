@@ -32,6 +32,9 @@
   (evil-collection-init))
 (evil-mode 1)
 
+(define-key evil-normal-state-map "x" nil)
+(evilem-default-keybindings "x") ; TODO this doesn't have the two-char search from easymotion.vim 2.0
+
 ;; editing
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq-default tab-width 4)
@@ -123,7 +126,7 @@
 	 ("" "hyperref" nil nil)))
  '(org-latex-packages-alist '(("" "cancel" t) ("" "physics" t)))
  '(package-selected-packages
-   '(rainbow-mode flyspell-correct-ivy org-fragtog hl-todo laas evil-smartparens yasnippet aas activity-watch-mode request focus company-lsp company all-the-icons-ivy-rich treemacs-all-the-icons lsp-ivy lsp-treemacs flycheck lsp-ui lsp-mode fast-scroll evil-collection async olivetti highlight-indent-guides git-gutter magit counsel-fd swiper vlf evil-org use-package undo-tree aggressive-indent smart-tabs-mode evil-vimish-fold evil-surround workgroups2 smooth-scrolling doom-modeline ivy doom-themes evil))
+   '(evil-easymotion rainbow-mode flyspell-correct-ivy org-fragtog hl-todo laas evil-smartparens yasnippet aas activity-watch-mode request focus company-lsp company all-the-icons-ivy-rich treemacs-all-the-icons lsp-ivy lsp-treemacs flycheck lsp-ui lsp-mode fast-scroll evil-collection async olivetti highlight-indent-guides git-gutter magit counsel-fd swiper vlf evil-org use-package undo-tree aggressive-indent smart-tabs-mode evil-vimish-fold evil-surround workgroups2 smooth-scrolling doom-modeline ivy doom-themes evil))
  '(smartparens-global-mode nil)
  '(vlf-application 'dont-ask)
  '(warning-suppress-log-types '((use-package)))

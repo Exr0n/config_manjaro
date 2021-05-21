@@ -2,7 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+set $mod Mod1
 
 set $term /bin/alacritty
 
@@ -28,8 +28,6 @@ font xft:URWGothic-Book 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
-
-# application shortcuts
 
 # kill focused window
 bindsym $mod+q kill
@@ -58,16 +56,17 @@ bindsym $mod+Ctrl+m exec $term -e 'alsamixer'
 
 # Start Applications
 
-bindsym $mod+Shift+q    --release exec --no-startup-id  xkill
-# homerow apps
-bindsym $mod+Shift+t    --release exec                  $term
-bindsym $mod+Shift+n    --release exec                  emacsclient -nc -a="" "$@"
-bindsym $mod+Shift+h    --release exec                  brave 
-bindsym $mod+Shift+d    --release exec                  brave --incognito
+bindsym $mod+Ctrl+q    --release exec --no-startup-id  xkill
+# homerow appCtrl
+bindsym $mod+Ctrl+t    --release exec                  $term
+bindsym $mod+Ctrl+n    --release exec                  emacsclient -nc -a="" "$@"
+bindsym $mod+Ctrl+h    --release exec                  brave 
+bindsym $mod+Ctrl+d    --release exec                  brave --incognito
 # screenshots
-bindsym $mod+Shift+2    --release exec --no-startup-id  i3-scrot -dc    # full screen to clipboard
-bindsym $mod+Shift+3    --release exec --no-startup-id  i3-scrot -wc    # window      to clipboard
-bindsym $mod+Shift+4    --release exec --no-startup-id  i3-scrot -sc    # selection   to clipboard
+#bindsym $mod+Shift+2    --release exec --no-startup-id  i3-scrot -dc    # full screen to clipboard
+#bindsym $mod+Shift+3    --release exec --no-startup-id  i3-scrot -wc    # window      to clipboard
+#bindsym $mod+Shift+4    --release exec --no-startup-id  i3-scrot -sc    # selection   to clipboard
+#bindsym $mod+Ctrl+4     --release exec                  import png :- | xclip -selection c -t image/png
 #bindsym $mod+t exec --no-startup-id pkill picom
 #bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 #bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -87,10 +86,10 @@ bindsym $mod+l focus right
 #bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Ctrl+h move left
-bindsym $mod+Ctrl+j move down
-bindsym $mod+Ctrl+k move up
-bindsym $mod+Ctrl+l move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 #bindsym $mod+Shift+Left move left
@@ -301,6 +300,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id emacs --daemon
 exec --no-startup-id syncthing 
+exec --no-startup-id "sleep 0.5; aw-qt"
 
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
@@ -311,7 +311,9 @@ exec --no-startup-id sudo mpd
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/start.sh
+
 exec_always --no-startup-id $HOME/.config/dontrun_custom/rebind_keys.zsh
+exec_always --no-startup-id echo "1" > /sys/module/hid_apple/parameters/swap_opt_cmd
 
 exec --no-startup-id "cd $HOME/projects/Taproot; ./command.sh >> ~/.data/taproot_log.txt 2>&1"
 exec --no-startup-id "$HOME/.config/dontrun_custom/autostart.zsh"

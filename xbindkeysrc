@@ -2,7 +2,7 @@
 "~/.config/dontrun_custom/rebind_keys.zsh"
     Mod4 + g
 
-"~/.config/zsh_custom/bin/alt_active_setvar.zsh"
+"~/.config/bin/alt_active_setvar.zsh"
     Mod4 + c
 
 "import png:- | xclip -selection c -t image/png &" # TODO: BROKEN
@@ -36,11 +36,11 @@
     Mod4 + u
 
 # alt active updown
-"/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Up"
+"/bin/xdotool key --clearmodifiers --window $(~/.config/bin/alt_active_checkvar.zsh) Up"
     Mod4 + k
-"/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Down"
+"/bin/xdotool key --clearmodifiers --window $(~/.config/bin/alt_active_checkvar.zsh) Down"
     Mod4 + j
-"/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Up"
-    Mod4 + k
-"/bin/xdotool key --clearmodifiers --window $(~/.config/zsh_custom/bin/alt_active_checkvar.zsh) Down"
-    Mod4 + j
+"/bin/xdotool key --clearmodifiers --window $(~/.config/bin/alt_active_checkvar.zsh) Left"
+    Mod4 + h
+"/bin/xdotool key --clearmodifiers --window $(~/.config/bin/alt_active_checkvar.zsh) Right"
+    Mod4 + l

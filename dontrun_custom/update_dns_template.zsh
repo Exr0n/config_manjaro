@@ -13,7 +13,7 @@ source $CONFIG/zsh_custom/define_color_codes.zsh
 for k v in ${(kv)creds}; do
     if [[ "$(dig +short $k)" != $MYIP ]]; then
         printf "${COLOR_LightRed}${k}${COLOR_Orange} not up to date...\n    "
-        echo curl -X POST -A 'def firefox' "https://${v}@domains.google.com/nic/update?hostname=DOMAIN&myip=${MYIP}"
+        curl -X POST -A 'def firefox' "https://${v}@domains.google.com/nic/update?hostname=DOMAIN&myip=${MYIP}"
     else
         echo ${COLOR_LightGreen}${k}${COLOR_Green} up to date
     fi

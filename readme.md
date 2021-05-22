@@ -33,7 +33,14 @@ timedatectl status # used to check if syncing is enabled
 sudo ufw enable
 sudo ufw allow <ports> # corsaur.us http and https, ssh, mc
 
+# pit2ya
 pym pip install pit2ya==0.3.9 # or whichever the latest version is
+
+# ssh 
+yay -S openssh
+sudo systemctl enable sshd 
+sudo systemctl start sshd
+sudo systemctl status sshd
 ```
 
 # other things to do

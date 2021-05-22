@@ -1,6 +1,6 @@
 ```sh
 sudo pacman -S yay
-yay -S alacritty rustup gcc neovim zsh cmake go brave xbindkeys xcape nvidia-settings python-pip discord certbot syncthing activitywatch colorpicker okular ispell aspell
+yay -S alacritty rustup gcc neovim zsh cmake go brave xbindkeys xcape nvidia-settings python-pip discord certbot syncthing activitywatch colorpicker okular ispell aspell dnsutils
 yay -S polybar mpd conky
 yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-iosevka-aile
 yay -S pandoc xelatex texlive-most

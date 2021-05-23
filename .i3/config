@@ -214,6 +214,8 @@ bindsym $mod+Shift+9 move container to workspace $ws19; workspace $ws19
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [class="discord"] $ws19
+assign [class="drc_autostart"] $ws19
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -310,6 +312,8 @@ exec --no-startup-id emacs --daemon
 exec --no-startup-id syncthing 
 exec --no-startup-id "sleep 0.5; aw-qt"
 
+exec --no-startup-id discord
+
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
@@ -324,7 +328,7 @@ exec_always --no-startup-id $HOME/.config/dontrun_custom/rebind_keys.zsh
 exec_always --no-startup-id "echo 1 > /sys/module/hid_apple/parameters/swap_opt_cmd"
 exec_always --no-startup-id "sleep 1; echo 1 > /sys/module/hid_apple/parameters/swap_opt_cmd"
 
-exec --no-startup-id "cd ~/projects/Taproot; ./command.sh >> ~/.data/taproot_log.txt 2>&1"
+#exec --no-startup-id "cd ~/projects/Taproot; ./command.sh >> ~/.data/taproot_log.txt 2>&1"
 exec --no-startup-id "$HOME/.config/dontrun_custom/autostart.zsh"
 
 # Color palette used for the terminal ( ~/.Xresources file )

@@ -36,7 +36,7 @@ bindsym $mod+q kill
 bindsym $mod+space exec --no-startup-id dmenu_recency
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
+#bindsym $mod+z exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -109,7 +109,7 @@ bindsym $mod+Shift+semicolon split v;exec notify-send 'tile vertically'
 #bindsym $mod+a split toggle
 
 # toggle fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+b fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+v layout stacking
@@ -123,7 +123,7 @@ bindsym $mod+Shift+Return floating toggle
 bindsym $mod+Return focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+#bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+semicolon focus parent

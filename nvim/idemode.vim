@@ -142,6 +142,7 @@ function! s:CustomizeColors()
 		let cursorline_cterm=''
 	endif
 	exec 'hi CursorLine ' . cursorline_gui . ' ' . cursorline_cterm
+    "exec 'hi Normal guibg=NONE ctermbg=NONE'
 endfunction
 augroup OnColorScheme
 	autocmd!
@@ -161,6 +162,7 @@ colo challenger_deep
 highlight Type          cterm=italic    gui=italic
 highlight Identifier    cterm=bold      gui=bold
 highlight Function      cterm=bold      gui=bold
+highlight Normal        guibg=NONE      ctermbg=NONE
 
 " semantic highlight
 "autocmd FileType python,javascript,c,cpp,cuda,typescript,lisp,zsh,bash,sh,rust,go SemanticHighlightToggle

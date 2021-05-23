@@ -182,6 +182,9 @@
 (scroll-bar-mode -1)
 (global-visual-line-mode 1)
 
+;;; visuals - opacity transparency
+(add-to-list 'default-frame-alist '(alpha . (92 . 80)))
+
 ;;; modeline
 (use-package doom-modeline
              :ensure t

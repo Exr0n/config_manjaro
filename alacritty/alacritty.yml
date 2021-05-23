@@ -12,6 +12,7 @@ font:
         family: Iosevka Term SS12 Light
         #family: 'RobotoMono'
     use_thin_strokes: true
+background_opacity: 0.92
 colors:
     cursor:
         text: '#000000'

@@ -300,7 +300,7 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom --experimental-backends -b
 exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -376,7 +376,7 @@ set_from_resource $term_color15    color15
 # Set inner/outer gaps
 gaps inner 10
 gaps outer 1
-gaps bottom 60
+gaps bottom 40
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

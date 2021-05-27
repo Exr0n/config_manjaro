@@ -3,6 +3,7 @@ sudo pacman -S yay
 yay -S alacritty rustup gcc neovim zsh cmake go brave xbindkeys xcape nvidia-settings python-pip discord certbot syncthing activitywatch colorpicker okular ispell aspell dnsutils mupdf 
 yay -S polybar mpd conky
 yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-iosevka-aile
+yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys manually: https://unix.stackexchange.com/a/617320
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay

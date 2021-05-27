@@ -327,7 +327,6 @@
 					" nn" " \\left("
 					"ss " "\\right) "
 
-					" FF" " \\mathbb{F}"
 					" CC" " \\mathbb{C}"
 					" RR" " \\mathbb{R}"
 					" NN" " \\mathbb{N}"
@@ -335,6 +334,7 @@
 					" QQ" " \\mathbb{Q}"
 					" HH" " \\mathbb{H}"
 					" PP" " \\mathbb{P}"
+					" FF" " \\mathbb{F}"
 
 					" Pp" " \\mathcal{P}"
 					" Ll" " \\mathcal{L}"

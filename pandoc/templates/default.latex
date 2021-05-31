@@ -183,8 +183,9 @@ $header-includes$
   \textrmlf{Compiled }
   \#$BUILDID$
   \textrmlf{ }
+  \textrmlf{on} 
   $endif$
-  \textrmlf{on} $date$
+  $date$
   $else$
   \today
   $endif$

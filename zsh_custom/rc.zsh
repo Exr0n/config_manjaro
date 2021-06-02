@@ -70,6 +70,16 @@ alias pt='pit2ya_mod'
 #alias  t='tl continue "$(tl ls -f description | tail -n +2 | fzf)"'
 #alias  t='tl continue ${"$(tl ls -f description | tail -n +2 | fzf)": 1}'
 
+track_pool() {
+    if [[ -z $1 ]]; then
+        echo "Empty shot count! abort."
+    else
+        echo $(date -Is),$1 >> $HOME/org/autotrack/8ball_pool.csv
+        pit2ya_mod 'Curiosity - 8ball Pool Practice'
+        pit2ya_crt 'Transition'
+    fi
+}
+
 alias sus='systemctl suspend'
 alias slep='xset dpms force off'
 if [[ `uname` != "Darwin" ]]; then

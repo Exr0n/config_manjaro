@@ -18,6 +18,7 @@ message/rfc822=userapp-Thunderbird.desktop
 application/pdf=epdfview.desktop
 application/x-bittorrent=deluge.desktop
 x-scheme-handler/webcal=brave-browser.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-ADAN40.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-brave.desktop
@@ -38,3 +39,4 @@ x-scheme-handler/mailto=userapp-Thunderbird.desktop;
 message/rfc822=userapp-Thunderbird.desktop;
 application/pdf=epdfview.desktop;
 application/x-bittorrent=deluge.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-ADAN40.desktop;

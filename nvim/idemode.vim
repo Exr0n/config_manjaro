@@ -22,6 +22,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'tpope/vim-fugitive'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
@@ -288,6 +290,8 @@ nnoremap <M-Left> <C-o>
 nnoremap <M-Right> <C-I>
 nnoremap <M-Left> <C-o>
 nnoremap <M-Right> <C-I>
+
+inoremap <C-e> <Esc>wa
 
 " easymotion
 nmap x <Plug>(easymotion-overwin-f2)

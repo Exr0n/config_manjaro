@@ -3,14 +3,14 @@ sudo pacman -S yay
 yay -S rustup gcc neovim zsh cmake go nvidia-settings python-pip certbot ispell aspell 
 yay -S alacritty discord telegram okular brave mupdf 
 yay -S syncthing activitywatch 
-yay -S xautomation xcape xbindkeys 
+yay -S xautomation xcape xbindkeys interception-dual-function-keys
 yay -S polybar mpd conky
 yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-iosevka-aile
 yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys manually: https://unix.stackexchange.com/a/617320
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay
-yay -S coreutils yarn dnsutils pdftk colorpicker the_silver_searcher hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq
+yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev
 yay -S lunar-client
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
@@ -27,7 +27,10 @@ ln -s $HOME/.config/xinitrc ~/.xinitrc
 ln -s $HOME/.config/xbindkeysrc ~/.xbindkeysrc
 ln -s $HOME/.config/.emacs.d ~
 ln -s $HOME/.config/.Xresources ~
+ln -s $HOME/.config/conky/.conkyrc ~
+ln -s $HOME/.config/conky ~/.conky
 ln -s $HOME/.config/pandoc ~/.pandoc
+sudo ln -s $HOME/.config/dontrun_custom/etc_interception_udevmon.yml /etc/interception/udevmon.yaml
 
 # enable time/date syncing
 sudo systemctl enable systemd-timesyncd.service

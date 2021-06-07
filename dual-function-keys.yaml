@@ -1,0 +1,32 @@
+# source https://emacsredux.com/blog/2020/07/05/remap-enter-to-control-in-gnu-linux-2020-edition/
+# readme https://gitlab.com/interception/linux/plugins/dual-function-keys
+TIMING:
+    TAP_MILLISEC: 150
+    DOUBLE_TAP_MILLISEC: 100 # what does this even do
+
+MAPPINGS:
+    - KEY: KEY_LEFTSHIFT
+      TAP: KEY_MINUS
+      HOLD: KEY_LEFTSHIFT
+
+    #- KEY: KEY_RIGHTSHIFT
+    #  TAP: KEY_EQUAL
+    #  HOLD: KEY_RIGHTSHIFT
+
+    - KEY: KEY_LEFTALT
+      TAP: [ KEY_LEFTSHIFT, KEY_MINUS ] # left brace
+      HOLD: KEY_LEFTALT
+
+    #- KEY: KEY_RIGHTALT
+    #  TAP: KEY_LEFTBRACE # slash
+    #  HOLD: KEY_RIGHTALT
+    #
+    - KEY: KEY_RIGHTALT
+      TAP: KEY_ENTER 
+      HOLD: KEY_RIGHTALT
+
+    - KEY: KEY_LEFTMETA
+      TAP: KEY_BACKSLASH # backslash
+      HOLD: KEY_LEFTMETA
+
+

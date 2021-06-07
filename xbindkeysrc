@@ -8,6 +8,9 @@
 "import png:- | xclip -selection c -t image/png &" # TODO: BROKEN
     Mod4 + r
 
+"~/projects/interesting/public/exr0n_paste.zsh"
+    Mod4 + Shift + i
+
 # homerow (apps + slep)
 #brave --incognito
 #"firefox --private-window"

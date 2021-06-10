@@ -291,7 +291,7 @@ nnoremap <M-Right> <C-I>
 nnoremap <M-Left> <C-o>
 nnoremap <M-Right> <C-I>
 
-inoremap <C-e> <Esc>wa
+inoremap <C-e> <Right>
 
 " easymotion
 nmap x <Plug>(easymotion-overwin-f2)

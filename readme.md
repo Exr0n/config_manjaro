@@ -1,7 +1,7 @@
 ```sh
 sudo pacman -S yay
 yay -S rustup gcc neovim zsh cmake go nvidia-settings python-pip certbot ispell aspell 
-yay -S alacritty discord telegram okular brave mupdf 
+yay -S kitty discord telegram okular brave mupdf 
 yay -S syncthing activitywatch 
 yay -S xautomation xcape xbindkeys interception-dual-function-keys
 yay -S polybar mpd conky

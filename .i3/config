@@ -320,7 +320,8 @@ exec --no-startup-id discord
 
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+#exec --no-startup-id start_conky_maia
+exec --no-startup-id $HOME/.config/conky/start.sh
 exec --no-startup-id sudo mpd
 # exec --no-startup-id start_conky_green
 #exec --no-startup-id xautolock -time 10 -locker blurlock

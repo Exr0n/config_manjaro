@@ -169,7 +169,7 @@
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;;; font
-(set-face-attribute 'default nil :height 180)
+(set-face-attribute 'default nil :height 150)
 (set-face-attribute 'default t :font "Iosevka Term SS12" :weight 'light)
 ;; (set-face-attribute 'default t :font "Iosevka Term SS12" :weight 'light)
 ;; (set-face-attribute 'default t :font "Hack Nerd Font" :weight 'light)

@@ -46,7 +46,11 @@ Plug 'wadackel/vim-dogrun'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 "   HUD
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'glepnir/galaxyline.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'cespare/vim-toml'		" .toml syntax highlighting
 Plug 'luochen1990/rainbow'
 "Plug 'jaxbot/semantic-highlight.vim'

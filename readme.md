@@ -1,7 +1,7 @@
 ```sh
 sudo pacman -S yay
-yay -S rustup gcc neovim zsh cmake go nvidia-settings python-pip certbot ispell aspell 
-yay -S kitty discord telegram okular brave mupdf 
+yay -S rustup gcc neovim-git zsh cmake go nvidia-settings python-pip certbot ispell aspell 
+yay -S kitty discord telegram slack-desktop okular brave mupdf 
 yay -S syncthing activitywatch 
 yay -S xautomation xcape xbindkeys interception-dual-function-keys
 yay -S polybar mpd conky
@@ -14,6 +14,8 @@ yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher h
 yay -S lunar-client
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
+
+yarn global add http-server
 
 # nvidia pain
 #yay -S linux510-nvidia

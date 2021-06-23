@@ -5,7 +5,7 @@ window:
 scrolling:
     history: 100000
 font:
-    size: 16
+    size: 14
     normal:
         #family: Iosevka
         #family: Hack Nerd Font

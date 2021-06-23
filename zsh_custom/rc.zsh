@@ -18,6 +18,12 @@ function mv_confirm {
     fi
 }
 alias mv='mv_confirm'
+alias ls='lsd'
+alias cat='bat'
+alias du='dust'
+alias df='duf'
+alias ping='gping'
+eval "$(zoxide init zsh --cmd c)"
 #    vim tmux integration
 #        that moment when you forget what's vim and what's tmux
 alias :q='tmux kill-pane'

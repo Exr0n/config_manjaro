@@ -19,9 +19,10 @@ function mv_confirm {
 }
 alias mv='mv_confirm'
 alias ls='lsd'
-alias cat='bat'
-alias du='dust'
-alias df='duf'
+alias cat='echo use bat'
+alias du='echo use dust'
+alias df='echo use duf'
+alias rm='echo use rip'
 alias ping='gping'
 eval "$(zoxide init zsh --cmd c)"
 #    vim tmux integration

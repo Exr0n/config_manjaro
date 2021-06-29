@@ -1,2 +1,4 @@
 *.log
+cphistory.xml
+dialogs-state.ini
 

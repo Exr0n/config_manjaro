@@ -58,7 +58,7 @@ alias GG='gutil -A'
 alias py='python'
 alias pip='py -m pip'
 alias pym='py -m'
-alias venv='pym venv .venv && source .venv/bin/activate'
+alias venv='pym venv .venv && echo .venv/ >> .gitignore && source .venv/bin/activate'
 alias ipy='ipython'
 #    screen stuff
 alias sl='screen -ls'

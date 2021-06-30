@@ -11,7 +11,7 @@ call plug#begin($VIMCONFIG.'/plugged')
 " Editing
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
-
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tjdevries/coc-zsh'
 
@@ -50,10 +50,10 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'glepnir/galaxyline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'onsails/lspkind-nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'cespare/vim-toml'		" .toml syntax highlighting
 Plug 'luochen1990/rainbow'
-"Plug 'jaxbot/semantic-highlight.vim'
+Plug 'jaxbot/semantic-highlight.vim'
 let g:gitgutter_map_keys = 0
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
@@ -155,6 +155,16 @@ augroup OnColorScheme
 	autocmd ColorScheme,BufEnter,BufWinEnter * call s:CustomizeColors()
 augroup END
 
+" neovim treesitter config 
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+}
+EOF
+
 " force vim to use true colors (https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be)
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -168,17 +178,20 @@ colo challenger_deep
 highlight Type          cterm=italic    gui=italic
 highlight Identifier    cterm=bold      gui=bold
 highlight Function      cterm=bold      gui=bold
-highlight Normal        guibg=NONE      ctermbg=NONE
+highlight Normal        guibg=#1e1c31  
+highlight Cursor        guifg=black     guibg=#caca00
+highlight iCursor       guifg=black     guibg=steelblue
 
 " semantic highlight
-"autocmd FileType python,javascript,c,cpp,cuda,typescript,lisp,zsh,bash,sh,rust,go SemanticHighlightToggle
-"autocmd BufNewFile,BufRead * SemanticHighlightToggle
+autocmd FileType python,javascript,c,cpp,cuda,typescript,lisp,zsh,bash,sh,rust,go SemanticHighlightToggle
+autocmd BufNewFile,BufRead * SemanticHighlightToggle
 
 " neovim python path
 let g:python3_host_prog = $XDG_CONFIG_HOME . '/nvim/neovim_venv/bin/python'
-" neovide
+" neovide (still not working)
 let g:neovide_cursor_animation_length=0.03
 let g:neovide_cursor_trail_length=0.9
+set guifont=Iosevka\ Term\ SS12\ Light:h16
 
 "set search stuff
 set hlsearch
@@ -259,6 +272,9 @@ let g:NERDCommentEmptyLines = 1
 "map cn to NERDTreeToggle
 nnoremap <Leader>n :NERDTreeToggle<CR>
 xnoremap <Leader>n :NERDTreeToggle<CR>
+""map cn to nvim-tree.lua (broken)
+"nnoremap <Leader>n :NvimTreeToggle<CR>
+"xnoremap <Leader>n :NvimTreeToggle<CR>
 
 " git gutter jump to next hunk
 nmap <Leader>hn <Plug>(GitGutterNextHunk)

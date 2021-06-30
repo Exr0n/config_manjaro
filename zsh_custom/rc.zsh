@@ -33,7 +33,11 @@ alias :qa='tmux kill-window'
 #alias nvim='neovide' # :sun: :glasses: # :( capslock->control doesn't work
 # alias nvim='e' # emacs gang # TODO: iosevka, folds, 4 space indent, don't overwrite system clipboard
 alias vim='nvim'
-alias v='nvim'
+#alias v='neovide --frameless --multiGrid'
+function v {
+    neovide --frameless --multiGrid $@ &
+    disown %neovide
+}
 alias compile_org_to_pdf='pandoc -s *.org -o export.pdf --pdf-engine=xelatex --lua-filter=$HOME/.pandoc/filters/org_directives_to_metadata.lua && mupdf export.pdf'
 #    git
 alias gpl='git pull'

@@ -60,6 +60,7 @@ bindsym $mod+Ctrl+q    --release exec --no-startup-id  xkill
 # homerow appCtrl
 bindsym $mod+Ctrl+t    --release exec                  $term
 bindsym $mod+Ctrl+n    --release exec                  emacsclient -nc -a="" "$@"
+#bindsym $mod+Ctrl+s    --release exec                  neovide --frameless --multiGrid -u $HOME/.config/vimrc ~
 bindsym $mod+Ctrl+h    --release exec                  brave 
 bindsym $mod+Ctrl+d    --release exec                  brave --incognito
 # screenshots

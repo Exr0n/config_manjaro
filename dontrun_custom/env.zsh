@@ -43,6 +43,12 @@ export PATH="$ZSH_CUSTOM/../dontrun_custom/Alacritty.app/Contents/MacOS:$PATH"
 # compilation include paths
 export CPLUS_INCLUDE_PATH="$XDG_CONFIG_HOME/include/cpp:$C_INCLUDE_PATH"
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/exr0n/snap/google-cloud-sdk/path.zsh.inc' ]; then . '/home/exr0n/snap/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/exr0n/snap/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/exr0n/snap/google-cloud-sdk/completion.zsh.inc'; fi
+
 # https://slmeng.medium.com/18b68d2817e7
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

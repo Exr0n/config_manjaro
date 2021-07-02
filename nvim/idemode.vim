@@ -183,7 +183,7 @@ highlight Cursor        guifg=black     guibg=#caca00
 highlight iCursor       guifg=black     guibg=steelblue
 
 " semantic highlight
-autocmd FileType python,javascript,c,cpp,cuda,typescript,lisp,zsh,bash,sh,rust,go SemanticHighlightToggle
+"autocmd FileType python,javascript,c,cpp,cuda,typescript,lisp,zsh,bash,sh,rust,go SemanticHighlightToggle
 autocmd BufNewFile,BufRead * SemanticHighlightToggle
 
 " neovim python path
@@ -304,6 +304,8 @@ nnoremap <Leader>s  :SemanticHighlightToggle<CR>
 " clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
 xmap <Leader>y :w !xsel --clipboard --input<CR><CR>
 nmap <Leader>y :w !xsel --clipboard --input<CR><CR>
+" and paste for neovide
+nnoremap <C-z> "+p
 
 " additional control-o control-i mappings
 nnoremap <M-Left> <C-o>

@@ -315,6 +315,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id emacs --daemon
 exec --no-startup-id syncthing 
+exec --no-startup-id flameshot
 exec --no-startup-id "sleep 0.5; aw-qt"
 
 exec --no-startup-id discord

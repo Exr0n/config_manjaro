@@ -122,18 +122,18 @@ alias emacs='open -a emacs --args $CAPSULEROOT/org/inbox.org'
 
 # functions
 #    cd to parent directory of file, https://askubuntu.com/a/316632
-function fcd () {
-    if [[ -n "$1" ]]; then
-	if [[ -f "$1" ]]; then
-	    \cd "$(dirname "$1")"
-	else
-	    \cd "$1"
-	fi
-    else
-	\cd $HOME
-    fi
-}
-alias c='fcd'
+#function fcd () {
+#    if [[ -n "$1" ]]; then
+#    if [[ -f "$1" ]]; then
+#        \cd "$(dirname "$1")"
+#    else
+#        \cd "$1"
+#    fi
+#    else
+#    \cd $HOME
+#    fi
+#}
+#alias c='fcd'
 alias ..='"$(dirname "$(pwd)")"'
 
 function chpwd () {	# auto called by zsh

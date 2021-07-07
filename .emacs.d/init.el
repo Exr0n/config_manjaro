@@ -75,20 +75,43 @@
 ;; (require 'workgroups2); TODO: FIX
 
 ;; LSP
+
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+         (python-mode . lsp)
+         (c-mode . lsp)
+         (c++-mode . lsp)
+         (lisp-mode . lsp)
+         (javascript-mode . lsp)
+         (rust-mode . lsp))
+  :commands lsp)
+
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
+
+(use-package lsp-ui
+  :init
+	(setq lsp-ui-sideline-show-diagnostics t)
+	(setq lsp-ui-sideline-show-hover t)
+	(setq lsp-ui-delay 0)
+  :commands lsp-ui-mode)
+
 ;; if you want to change prefix for lsp-mode keybindings.
-(setq lsp-keymap-prefix "M-l")
+;; (setq lsp-keymap-prefix "M-l")
+;; (require 'lsp-mode)
+;; (add-hook 'c-mode-hook #'lsp)
+;; (add-hook 'c++-mode-hook #'lsp)
+;; (add-hook 'lisp-mode-hook #'lsp)
+;; (add-hook 'python-mode-hook #'lsp)
+;; (add-hook 'javascript-mode-hook #'lsp)
 
-(require 'lsp-mode)
-(add-hook 'c-mode-hook #'lsp)
-(add-hook 'c++-mode-hook #'lsp)
-(add-hook 'lisp-mode-hook #'lsp)
-(add-hook 'python-mode-hook #'lsp)
-(add-hook 'javascript-mode-hook #'lsp)
-
-(require 'lsp-ui)
-(setq lsp-ui-sideline-show-diagnostics t)
-(setq lsp-ui-sideline-show-hover t)
-(setq lsp-ui-delay 0)
+;; (require 'lsp-ui)
 
 ;; completion
 (require 'company)
@@ -126,7 +149,7 @@
 	 ("" "hyperref" nil nil)))
  '(org-latex-packages-alist '(("" "cancel" t) ("" "physics" t)))
  '(package-selected-packages
-   '(evil-easymotion rainbow-mode flyspell-correct-ivy org-fragtog hl-todo laas evil-smartparens yasnippet aas activity-watch-mode request focus company-lsp company all-the-icons-ivy-rich treemacs-all-the-icons lsp-ivy lsp-treemacs flycheck lsp-ui lsp-mode fast-scroll evil-collection async olivetti highlight-indent-guides git-gutter magit counsel-fd swiper vlf evil-org use-package undo-tree aggressive-indent smart-tabs-mode evil-vimish-fold evil-surround workgroups2 smooth-scrolling doom-modeline ivy doom-themes evil))
+   '(lsp-pyright tree-sitter-langs tree-sitter evil-easymotion rainbow-mode flyspell-correct-ivy org-fragtog hl-todo laas evil-smartparens yasnippet aas activity-watch-mode request focus company-lsp company all-the-icons-ivy-rich treemacs-all-the-icons lsp-ivy lsp-treemacs flycheck lsp-ui lsp-mode fast-scroll evil-collection async olivetti highlight-indent-guides git-gutter magit counsel-fd swiper vlf evil-org use-package undo-tree aggressive-indent smart-tabs-mode evil-vimish-fold evil-surround workgroups2 smooth-scrolling doom-modeline ivy doom-themes evil))
  '(smartparens-global-mode nil)
  '(vlf-application 'dont-ask)
  '(warning-suppress-log-types '((use-package)))
@@ -199,6 +222,10 @@
              :config
 	         (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 	         (add-hook 'org-mode-hook 'rainbow-delimeters-mode))
+
+;; treesitter syntax highlighting
+(require 'tree-sitter)
+(require 'tree-sitter-langs)
 
 (use-package hl-todo-mode
              :config

@@ -21,4 +21,6 @@ Natron-qt.conf
 pipewire/
 viewnior/
 Slack/
+cef_user_data/
+unity3d/
 

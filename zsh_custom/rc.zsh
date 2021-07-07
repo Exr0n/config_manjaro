@@ -143,14 +143,16 @@ function chpwd () {	# auto called by zsh
 
 	cur="$(pwd)"
 
-	while [[ $cur != / ]]; do   # search upwards https://unix.stackexchange.com/a/35265
-		got="$(find "$cur" -maxdepth 1 -mindepth 1 "$@")"
+	# pyvenv stuff
+	if command -v deactivate; then deactivate; fi
+	while [[ -n $cur && $cur != "/" ]]; do   # search upwards https://unix.stackexchange.com/a/35265
+		[[ -f "$cur/pyvenv.cfg" ]] && source "$cur/bin/activate" && break
+		[[ -f "$cur/.venv/pyvenv.cfg" ]] && source "$cur/.venv/bin/activate" && break
+
 		# Note: if you want to ignore symlinks, use "$(realpath -s "$path"/..)"
-		cur="$(readlink -f "$path"/..)"
+		cur="$(readlink -f "$cur"/..)"
 	done
 
-	[[ -f 'pyvenv.cfg' ]] && source bin/activate
-    [[ -f '.venv/pyvenv.cfg' ]] && source .venv/bin/activate
 }
 
 function run_generic () {

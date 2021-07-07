@@ -141,7 +141,15 @@ function chpwd () {	# auto called by zsh
     #git rev-parse --show-toplevel > /dev/null 2>&1 &&
 	echo "$(pwd)" >> $XDG_DATA_HOME/recent_git_dirs.csv
 
-    [[ -f 'pyvenv.cfg' ]] && source bin/activate
+	cur="$(pwd)"
+
+	while [[ $cur != / ]]; do   # search upwards https://unix.stackexchange.com/a/35265
+		got="$(find "$cur" -maxdepth 1 -mindepth 1 "$@")"
+		# Note: if you want to ignore symlinks, use "$(realpath -s "$path"/..)"
+		cur="$(readlink -f "$path"/..)"
+	done
+
+	[[ -f 'pyvenv.cfg' ]] && source bin/activate
     [[ -f '.venv/pyvenv.cfg' ]] && source .venv/bin/activate
 }
 

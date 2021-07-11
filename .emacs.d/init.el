@@ -1,3 +1,5 @@
+;; -*-no-byte-compile: t; -*-
+
 ;; things TODO before I can daily drive emacs: vim-like foldmethod=manual with nesting
 ;; other niceties: smart tabs, invisible characters, find-file recursively, ivy-swiper,  lsp, ligatures, rename support, show documentation, calendar to emacs https://opensource.com/article/20/1/emacs-mail-calendar
 ;; snippets : yasnippet, see discord for example

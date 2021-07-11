@@ -11,7 +11,7 @@ yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay
 yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher hyperfine wget tree ffmpeg fzf unzip xclip tig ag bat jq entr xorg-xev zoxide lsd dust  duf gping ngrok rm-improved flameshot
-yay -S lunar-client
+yay -S lunar-client steam
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
 

@@ -1,6 +1,6 @@
 ```sh
 sudo pacman -S yay
-yay -S rustup gcc neovim-git zsh cmake go nvidia-settings python-pip certbot ispell aspell 
+yay -S rust rustup clang gcc neovim-git zsh cmake go nvidia-settings python-pip tk certbot ispell aspell 
 yay -S kitty discord telegram slack-desktop okular brave mupdf 
 yay -S syncthing activitywatch 
 yay -S xautomation xcape xbindkeys interception-dual-function-keys
@@ -10,13 +10,14 @@ yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys m
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay
-yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher hyperfine wget tree ffmpeg fzf unzip xclip tig ag bat jq entr xorg-xev zoxide lsd dust  duf gping ngrok rm-improved flameshot
+yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev zoxide lsd dust duf gping ngrok rm-improved flameshot
 yay -S lunar-client steam
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
 
 yarn global add http-server
-python3 -m pip install kaggle
+python3 -m pip install kaggle numpy matplotlib pyautogui pandas spacy
+python3 -m spacy download en_core_web_lg
 
 # nvidia pain
 #yay -S linux510-nvidia
@@ -42,7 +43,7 @@ timedatectl status # used to check if syncing is enabled
 
 # uncomplicated firewall (ufw)
 sudo ufw enable
-sudo ufw allow <ports> # corsaur.us http and https, ssh, mc
+sudo ufw allow <ports> # corsaur.us http and https, ssh, mc, website
 
 # pit2ya
 pym pip install pit2ya==0.3.9 # or whichever the latest version is

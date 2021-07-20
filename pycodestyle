@@ -1,0 +1,5 @@
+[pycodestyle]
+ignore = E226, E302
+max-line-length = 65536
+statistics = True
+

@@ -110,6 +110,7 @@ alias aset='alt_active_setvar.zsh'
 
 #    makefile
 #alias m='make'
+alias make='make -j'
 alias bear='SDKROOT=$(xcrun --show-sdk-path) \bear'
 
 #    rust/cargo things

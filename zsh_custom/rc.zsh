@@ -48,7 +48,7 @@ function gpext {
 alias gp='gpext'
 alias grsh='git remote show'
 function gutil {
-    if [[ -z "$(git status --porcelain)" ]] then
+    if [[ -z "$(git status --porcelain .)" ]] then
 	echo "Nothing to add... commit anyways?"
 	read -t 1
     fi
@@ -199,7 +199,7 @@ export FZF_CTRL_T_COMMAND='hypertrav $([[ "${PWD##$HOME}" != "${PWD}" ]] && echo
 export FZF_DEFAULT_COMMAND='hypertrav'
 
 #    Alias to auto open files with vim
-alias -s {txt,md,cpp,rs,js,mjs,py,properties,yml,yaml}=nvim
+alias -s {txt,md,cpp,js,mjs,py,properties,yml,yaml}=nvim
 alias -s {pdf,html}=ql
 
 #    One off aliases (like config commands)

@@ -11,7 +11,7 @@ yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys m
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay
-yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher fd hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev zoxide lsd dust duf gping ngrok rm-improved flameshot
+yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher fd hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev zoxide lsd dust duf gping ngrok rm-improved flameshot pv
 yay -S lunar-client steam
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
@@ -19,6 +19,8 @@ chsh -s $(which zsh)
 yarn global add http-server
 python3 -m pip install kaggle numpy matplotlib pyautogui pandas spacy
 python3 -m spacy download en_core_web_lg
+
+cargo install cargo-script
 
 # nvidia pain
 #yay -S linux510-nvidia

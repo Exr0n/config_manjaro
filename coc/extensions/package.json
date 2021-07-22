@@ -5,6 +5,7 @@
     "coc-pyright": ">=1.1.150",
     "coc-rust-analyzer": ">=0.46.2",
     "coc-sh": ">=0.6.0",
+    "coc-tailwindcss": ">=0.7.0",
     "coc-tsserver": ">=1.7.0"
   }
 }

@@ -37,7 +37,10 @@ ln -s $HOME/.config/.Xresources ~
 ln -s $HOME/.config/conky/.conkyrc ~
 ln -s $HOME/.config/conky ~/.conky
 ln -s $HOME/.config/pandoc ~/.pandoc
+
 sudo ln -s $HOME/.config/dontrun_custom/etc_interception_udevmon.yml /etc/interception/udevmon.yaml
+
+mkdir -p $HOME/vol/storage/homecache && ln -s $HOME/vol/storage/homecache/ ~/.cache
 
 # enable time/date syncing
 sudo systemctl enable systemd-timesyncd.service

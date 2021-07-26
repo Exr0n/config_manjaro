@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag' " autopairs for html tags
 
 Plug 'tpope/vim-fugitive'
 

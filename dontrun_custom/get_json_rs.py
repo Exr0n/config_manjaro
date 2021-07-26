@@ -20,7 +20,8 @@ STRUCT_TEMPLATE = '''
 '''
 
 structs = f'''
-mod JsonSpec_{sys.argv[1] if len(sys.argv) > 1 else 'json_spec'} {{ '''
+mod JsonSpec_{sys.argv[1] if len(sys.argv) > 1 else 'json_spec'} {{
+    use serde::{{ Serialize, Deserialize }};'''
 
 def parse_spec(obj, name, path="", ismain=True):
     path += name

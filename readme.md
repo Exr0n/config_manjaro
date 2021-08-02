@@ -27,6 +27,9 @@ cargo install cargo-script
 #            ^^^ replace with linux kernel version! (maybe) 5.10 -> 510 DOESNT WORK
 # instead, on manjaro, use
 sudo mhwd -a pci nofree 0300
+# also powerlimit chunky gpus to reduce heat
+sudo nvidia-smi --id=1 -pm 1
+sudo nvidia-smi --id=1 --power-limit=250
 
 # ln -s A BUNCH OF STUFF
 ln -s $HOME/.config/.i3 ~

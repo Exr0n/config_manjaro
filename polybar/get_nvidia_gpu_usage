@@ -1,7 +1,7 @@
 #!/bin/zsh
 # depends on nvidia-smi
 
-array_of_lines=("${(@f)$(nvidia-smi --query-gpu='utilization.gpu,memory.used,memory.total' --format=csv,noheader,nounits)}")
+array_of_lines=("${(@f)$(nvidia-smi --query-gpu='utilization.gpu,memory.used,memory.total,utilization.memory' --format=csv,noheader,nounits)}")
 
 get_ramp_bar() {
     if   [[ 1 -eq "$(echo "$1 < 12.5" | bc)" ]]; then echo -n "%{F#aaff77}▁"
@@ -16,10 +16,11 @@ get_ramp_bar() {
 }
 
 get_ramps () {
-    echo -n "$(get_ramp_bar $1)$(get_ramp_bar $2) "
+    echo -n "$(get_ramp_bar $1)$(get_ramp_bar $2)$(get_ramp_bar $3) "
 }
 
 for line in $array_of_lines; do
-    get_ramps $(echo $line | awk '{print $1 $2/$3*100}' | tr , ' ')
+    #echo $line | awk '{print $1 $2/$3*100, $4}'
+    get_ramps $(echo $line | awk '{print $1 $2/$3*100, $4}' | tr , ' ')
 done
 

@@ -28,6 +28,8 @@ cargo install cargo-script
 # instead, on manjaro, use
 sudo mhwd -a pci nofree 0300
 # also powerlimit chunky gpus to reduce heat
+sudo nvidia-smi --id=0 -pm 1
+sudo nvidia-smi --id=0 --power-limit=250
 sudo nvidia-smi --id=1 -pm 1
 sudo nvidia-smi --id=1 --power-limit=250
 
@@ -62,6 +64,12 @@ yay -S openssh
 sudo systemctl enable sshd 
 sudo systemctl start sshd
 sudo systemctl status sshd
+
+# swapfile https://linuxize.com/post/create-a-linux-swap-file/
+sudo fallocate -l 50G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile # or edit fstab with /swapfile swap swap defaults 0 0
 ```
 
 # other things to do

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Menu>
+    <Name>Applications</Name>
+    <MergeFile type="parent">/etc/xdg/menus/applications.menu</MergeFile>
+    <Menu>
+        <Directory>Xilinx Design Tools_1628127083077.directory</Directory>
+        <Name>Xilinx Design Tools</Name>
+        <Include>
+            <Filename>Manage Xilinx Licenses 2019.2_1628127083142.desktop</Filename>
+        </Include>
+        <Include>
+            <Filename>Uninstall 2019.2_1628127083150.desktop</Filename>
+        </Include>
+        <Include>
+            <Filename>Add Design Tools or Devices 2019.2_1628127083157.desktop</Filename>
+        </Include>
+        <Include>
+            <Filename>Uninstall Xilinx Information Center_1628127083179.desktop</Filename>
+        </Include>
+        <Include>
+            <Filename>Xilinx Information Center_1628127083185.desktop</Filename>
+        </Include>
+        <Menu>
+            <Directory>Vivado 2019.2_1628127083082.directory</Directory>
+            <Name>Vivado 2019.2</Name>
+            <Include>
+                <Filename>Vivado HLS 2019.2 Command Prompt_1628127083082.desktop</Filename>
+            </Include>
+            <Include>
+                <Filename>Vivado HLS 2019.2_1628127083113.desktop</Filename>
+            </Include>
+            <Include>
+                <Filename>Vivado 2019.2 Tcl Shell_1628127083120.desktop</Filename>
+            </Include>
+            <Include>
+                <Filename>Vivado 2019.2_1628127083128.desktop</Filename>
+            </Include>
+            <Menu>
+                <Directory>System Generator_1628127083135.directory</Directory>
+                <Name>System Generator</Name>
+                <Include>
+                    <Filename>System Generator 2019.2_1628127083135.desktop</Filename>
+                </Include>
+            </Menu>
+        </Menu>
+        <Menu>
+            <Directory>DocNav_1628127083164.directory</Directory>
+            <Name>DocNav</Name>
+            <Include>
+                <Filename>Documentation Navigator_1628127083164.desktop</Filename>
+            </Include>
+            <Include>
+                <Filename>Uninstall DocNav_1628127083170.desktop</Filename>
+            </Include>
+        </Menu>
+    </Menu>
+</Menu>

@@ -10,7 +10,7 @@ yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-io
 yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys manually: https://unix.stackexchange.com/a/617320
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
-yay -S neofetch bottom cmatrix cowsay
+yay -S neofetch bottom cmatrix cowsay smartmontools
 yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher fd hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev zoxide lsd dust duf gping ngrok rm-improved flameshot pv
 yay -S lunar-client steam
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool

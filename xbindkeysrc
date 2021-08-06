@@ -5,7 +5,9 @@
 "~/.config/bin/alt_active_setvar.zsh"
     Mod4 + c
 
-"import png:- | xclip -selection c -t image/png &" # TODO: BROKEN
+#"import png:- | xclip -selection c -t image/png &" # TODO: BROKEN
+#    Mod4 + r
+"flameshot gui"
     Mod4 + r
 
 "~/projects/interesting/public/exr0n_paste.zsh"

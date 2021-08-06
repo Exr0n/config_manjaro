@@ -1,0 +1,2 @@
+#!/bin/zsh
+nvim -u $XDG_CONFIG_HOME/nvim/mathmode.vim $HOME/.cache/scratch.latex -c 'startinsert! | normal j$'; tex2png -iTD 300 -o $HOME/.cache/scratch.latex.png < $HOME/.cache/scratch.latex && xclip -selection clipboard -t image/png -i $HOME/.cache/scratch.latex.png && \cp $XDG_CONFIG_HOME/dontrun_custom/scratch.latex.default $HOME/.cache/scratch.latex && \rm -f $HOME/.cache/scratch.latex.png && exit # nvim math mode

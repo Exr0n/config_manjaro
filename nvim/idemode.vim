@@ -1,10 +1,7 @@
 " QUICK CONFIG
 let g:airline_theme='cobalt2'
 
-
-
-set nocompatible
-exe 'set rtp+=' . $VIMCONFIG
+source $VIMCONFIG/defaults.vim
 
 call plug#begin($VIMCONFIG.'/plugged')
 
@@ -54,7 +51,7 @@ Plug 'onsails/lspkind-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'cespare/vim-toml'		" .toml syntax highlighting
 Plug 'luochen1990/rainbow'
-Plug 'jaxbot/semantic-highlight.vim'
+"Plug 'jaxbot/semantic-highlight.vim'
 let g:gitgutter_map_keys = 0
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
@@ -89,17 +86,12 @@ Plug 'mhinz/vim-startify'
 " Memes
 "Plug 'wakatime/vim-wakatime'
 "Plug 'ActivityWatch/aw-watcher-vim'
-Plug 'floobits/floobits-neovim'
+"Plug 'floobits/floobits-neovim'
 
 call plug#end()
 
 
 " My Customs
-" " CUSTOM: change backup dir https://stackoverflow.com/a/1625850/10372825
-set backupdir=$VIMCONFIG/autogentmp//
-set directory=$VIMCONFIG/autogentmp//
-set undodir=$VIMCONFIG/autogentmp//,~/.vim/autogentmp/undo//
-
 " jump to previous position https://stackoverflow.com/questions/774560/in-vim-how-do-i-get-a-file-to-open-at-the-same-line-number-i-closed-it-at-last
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
@@ -107,8 +99,6 @@ if has("autocmd")
 endif
 
 " from https://www.linode.com/docs/tools-reference/tools/introduction-to-vim-customization/
-set ttyfast " speed up scrolling
-set scrolloff=5 " display 8 lines above and below cursor at all times
 set matchpairs+=<:>,$:$
 
 " auto-toggle hybrid line numbers on buffer enter/leave
@@ -120,20 +110,11 @@ set matchpairs+=<:>,$:$
 "    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 "augroup END
 
-" autoread (https://vi.stackexchange.com/a/13092)
-set autoread
-au FocusGained,BufEnter * :checktime
-
 " passive and HUD
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 set number " line numbers
 "set rnu    " relative numbers
-set ruler  " display current cursor "coordinates"
 set nosm   " don't show match
-" show invisibles
-set encoding=utf-8
-set listchars=eol:⤶,tab:→·,trail:·,nbsp:▫,extends:>,precedes:<
-set list
 
 "set filetype off
 filetype plugin indent on
@@ -156,6 +137,15 @@ augroup OnColorScheme
 	autocmd ColorScheme,BufEnter,BufWinEnter * call s:CustomizeColors()
 augroup END
 
+" colors 
+colo challenger_deep
+highlight Type          cterm=italic    gui=italic
+highlight Identifier    cterm=bold      gui=bold
+highlight Function      cterm=bold      gui=bold
+highlight Normal        guibg=#1e1c31  
+highlight Cursor        guifg=black     guibg=#caca00
+highlight iCursor       guifg=black     guibg=steelblue
+
 " neovim treesitter config 
 
 lua <<EOF
@@ -170,46 +160,10 @@ EOF
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
-set regexpengine=1 " supposedly makes things faster
-colo challenger_deep
-"highlight Comment       cterm=italic    gui=italic
-"highlight Conditional   cterm=italic    gui=italic
-"highlight Repeat        cterm=italic    gui=italic
-"highlight Keyword       cterm=italic    gui=italic
-highlight Type          cterm=italic    gui=italic
-highlight Identifier    cterm=bold      gui=bold
-highlight Function      cterm=bold      gui=bold
-highlight Normal        guibg=#1e1c31  
-highlight Cursor        guifg=black     guibg=#caca00
-highlight iCursor       guifg=black     guibg=steelblue
 
 " semantic highlight
 "autocmd FileType python,javascript,c,cpp,cuda,typescript,lisp,zsh,bash,sh,rust,go SemanticHighlightToggle
-autocmd BufNewFile,BufRead * SemanticHighlightToggle
-
-" neovim python path
-let g:python3_host_prog = $XDG_CONFIG_HOME . '/nvim/neovim_venv/bin/python'
-" neovide (still not working)
-let g:neovide_cursor_animation_length=0.03
-let g:neovide_cursor_trail_length=0.9
-set guifont=Iosevka\ Term\ SS12\ Light:h16
-
-"set search stuff
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
-" tab sizing
-set shiftwidth=4
-set ts=4
-set et
-set si " smart indent
-
-" stop physical line wrapping
-" https://stackoverflow.com/questions/2280030/how-to-stop-line-breaking-in-vim
-set textwidth=0
-set wrapmargin=0
+"autocmd BufNewFile,BufRead * SemanticHighlightToggle
 
 "   persistent folds (https://til.hashrocket.com/posts/17c44eda91-persistent-folds-between-vim-sessions)
 augroup AutoSaveFolds
@@ -232,13 +186,6 @@ function! NeatFoldText()
 endfunction
 set foldtext=NeatFoldText()
 
-" cursor stuff
-set mouse=a
-
-" background and performance
-set lazyredraw " don't redraw when executing macros
-set updatetime=100
-
 " Delete trailing white space on save, useful for some filetypes ;)
 " Stolen from https://github.com/nickmahd/.vim/blob/master/vimrc in Jan 2020
 fun! CleanExtraSpaces()
@@ -254,21 +201,7 @@ if has("autocmd")
 endif
 
 
-" custom keymaps
-let mapleader = " "
-set timeoutlen=500
-
 nnoremap q: <Nop>
-
-" nerd commenter
-nmap <Leader>t <Plug>NERDCommenterInvert
-xmap <Leader>t <Plug>NERDCommenterInvert
-
-let g:NERDCustomDelimiters = { 'c': { 'left': '//','right': '' } }
-
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-let g:NERDCommentEmptyLines = 1
 
 "map cn to NERDTreeToggle
 nnoremap <Leader>n :NERDTreeToggle<CR>
@@ -302,9 +235,6 @@ nnoremap <Leader>gl :diffget //3<CR>
 
 nnoremap <Leader>s  :SemanticHighlightToggle<CR>
 
-" clipboard https://coderwall.com/p/v-st8w/vim-copy-to-system-clipboard-on-a-mac
-xmap <Leader>y :w !xsel --clipboard --input<CR><CR>
-nmap <Leader>y :w !xsel --clipboard --input<CR><CR>
 " and paste for neovide
 nnoremap <C-z> "+p
 
@@ -316,18 +246,8 @@ nnoremap <M-Right> <C-I>
 
 inoremap <C-e> <Right>
 
-" easymotion
-nmap x <Plug>(easymotion-overwin-f2)
-let g:EasyMotion_smartcase = 1
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
 nnoremap <C-x><C-s> :w<CR>
 inoremap <C-x><C-s> <Esc>:w<CR>a
-
-" split direction
-set splitbelow
-set splitright
 
 source $VIMCONFIG/coc-config.vim
 "source $VIMCONFIG/zettel.vim

@@ -61,6 +61,7 @@ bindsym $mod+Ctrl+q    --release exec --no-startup-id  xkill
 bindsym $mod+Ctrl+t    --release exec                  $term
 #bindsym $mod+Ctrl+n    --release exec                  emacsclient -nc -a="" "$@"
 bindsym $mod+Ctrl+n    --release exec                  chromium --app=https://ideaflow.app
+bindsym $mod+Ctrl+s    --release exec                  $HOME/.config/dontrun_custom/copy_math_equation.zsh
 #bindsym $mod+Ctrl+s    --release exec                  neovide --frameless --multiGrid -u $HOME/.config/vimrc ~
 bindsym $mod+Ctrl+h    --release exec                  brave 
 bindsym $mod+Ctrl+d    --release exec                  brave --incognito
@@ -254,6 +255,7 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
 for_window [class="float.*"] floating enable
+for_window [title="float.*"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus

@@ -216,7 +216,8 @@
 (use-package rainbow-delimiters
              :config
 	         (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-	         (add-hook 'org-mode-hook 'rainbow-delimeters-mode))
+			 ;(add-hook 'org-mode-hook 'rainbow-delimeters-mode)
+             )
 
 ;; editing
 (use-package evil-surround              ; https://github.com/emacs-evil/evil-surround

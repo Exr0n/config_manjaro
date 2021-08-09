@@ -19,6 +19,7 @@ application/pdf=epdfview.desktop
 application/x-bittorrent=deluge.desktop
 x-scheme-handler/webcal=brave-browser.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-ADAN40.desktop
+x-scheme-handler/figma=figma-linux.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-brave.desktop

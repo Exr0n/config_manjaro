@@ -16,6 +16,8 @@ set autoread
 au FocusGained,BufEnter * :checktime
 
 set ruler  " display current cursor "coordinates"
+set laststatus=0
+set signcolumn=yes
 
 " show invisibles
 set encoding=utf-8

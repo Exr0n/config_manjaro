@@ -1,5 +1,5 @@
 " QUICK CONFIG
-let g:airline_theme='cobalt2'
+let g:airline_theme='transparent'
 
 source $VIMCONFIG/defaults.vim
 
@@ -44,8 +44,8 @@ Plug 'wadackel/vim-dogrun'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 "   HUD
-"Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'glepnir/galaxyline.nvim'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+"Plug 'glepnir/galaxyline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -70,7 +70,7 @@ let g:rainbow_conf = {
 \	'guifgs': ['magenta', 'cyan', 'orange', 'green', 'yellow'],
 \}
 
-let g:gitgutter_highlight_linenrs = 1 " auto highlight change line numbers
+let g:gitgutter_highlight_linenrs = 0 " auto highlight change line numbers
 let g:gitgutter_preview_win_floating = 0 " Disable floating/popup window for <Leader>hp
 
 let g:git_messenger_include_diff = "current" " show git diff of commit in pop-up window by default
@@ -142,9 +142,29 @@ colo challenger_deep
 highlight Type          cterm=italic    gui=italic
 highlight Identifier    cterm=bold      gui=bold
 highlight Function      cterm=bold      gui=bold
-highlight Normal        guibg=#1e1c31  
+"highlight Normal        guibg=#1e1c31  
+highlight Normal        ctermbg=NONE    guibg=NONE  
 highlight Cursor        guifg=black     guibg=#caca00
 highlight iCursor       guifg=black     guibg=steelblue
+highlight LineNr        ctermbg=NONE    guibg=NONE
+"highlight EndOfBuffer   ctermfg=black           " yeet the tildas, but it doesn't work
+set fcs=eob:\   " actually yeet the tildas
+"highlight DiffAdd       ctermbg=NONE    guibg=NONE
+"highlight DiffChange    ctermbg=NONE    guibg=NONE
+"highlight DiffDelete    ctermbg=NONE    guibg=NONE
+"highlight DiffText      ctermbg=NONE    guibg=NONE
+"highlight GitGutterAddLine              ctermbg=NONE guibg=NONE
+"highlight GitGutterChangeLine           ctermbg=NONE guibg=NONE
+"highlight GitGutterDeleteLine           ctermbg=NONE guibg=NONE
+"highlight GitGutterChangeDeleteLine     ctermbg=NONE guibg=NONE
+"highlight GitGutterAddLineNr            ctermbg=NONE guibg=NONE
+"highlight GitGutterChangeLineNr         ctermbg=NONE guibg=NONE
+"highlight GitGutterDeleteLineNr         ctermbg=NONE guibg=NONE
+"highlight GitGutterChangeDeleteLineNr   ctermbg=NONE guibg=NONE
+"highlight GitGutterAddIntraLine         ctermbg=NONE guibg=NONE
+"highlight GitGutterDeleteIntraLine      ctermbg=NONE guibg=NONE
+highlight SignColumn                    ctermbg=NONE guibg=NONE
+let g:gitgutter_set_sign_backgrounds = 1
 
 " neovim treesitter config 
 

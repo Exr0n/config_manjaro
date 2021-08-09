@@ -1,6 +1,6 @@
 ```sh
 sudo pacman -S yay
-yay -S rust rustup clang gcc neovim-git zsh cmake go nvidia-settings python-pip tk certbot ispell aspell 
+yay -S rust rustup clang gcc neovim-git emacs-git zsh cmake go nvidia-settings python-pip tk certbot ispell aspell 
 yay -S kitty discord telegram slack-desktop okular brave mupdf servo-latest
 yay -S syncthing activitywatch 
 yay -S cuda
@@ -37,7 +37,7 @@ sudo nvidia-smi --id=1 --power-limit=250
 ln -s $HOME/.config/.i3 ~
 ln -s $HOME/.config/xinitrc ~/.xinitrc
 ln -s $HOME/.config/xbindkeysrc ~/.xbindkeysrc
-ln -s $HOME/.config/.emacs.d ~
+ln -s $HOME/.config/emacs ~/.emacs.d
 ln -s $HOME/.config/.Xresources ~
 ln -s $HOME/.config/conky/.conkyrc ~
 ln -s $HOME/.config/conky ~/.conky
@@ -51,6 +51,9 @@ mkdir -p $HOME/vol/storage/homecache && ln -s $HOME/vol/storage/homecache/ ~/.ca
 sudo systemctl enable systemd-timesyncd.service
 timedatectl set-ntp true
 timedatectl status # used to check if syncing is enabled
+
+sudo systemctl --user enable emacs.service
+sudo systemctl --user start emacs.service
 
 # uncomplicated firewall (ufw)
 sudo ufw enable

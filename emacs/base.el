@@ -45,7 +45,12 @@
              (doom-themes-visual-bell-config)
              (doom-themes-org-config)
              ;; Set default theme.
-             (load-theme 'doom-challenger-deep))
+             (load-theme 'doom-challenger-deep)
+            :config
+            ;; top padding https://www.reddit.com/r/emacs/comments/5ldmjh/
+            (setq header-line-format "eeeeeeeeeeeeeeeeeeeeee")  ;; TODO: doesn't work
+            (set-face-attribute 'header-line nil :background (face-background 'default) :height 200)
+             )
 
 ;; Icons!
 (use-package all-the-icons)

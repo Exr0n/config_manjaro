@@ -2,12 +2,12 @@
 (load "~/.config/emacs/base.el")
 
 ;; org + latex
+(require 'org)
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 3.0))
 
 (use-package org-superstar
              :init
              (add-hook 'org-mode-hook (lambda () (org-superstar-mode)))
-             (add-hook 'org-mode-hook (lambda () (message "hi")))
              :config
              (custom-set-faces
                '(org-level-1 ((t (:inherit outline-1 :height 2.5))))
@@ -19,14 +19,8 @@
              (setq org-indent-mode-turns-on-hiding-stars nil)
              (setq org-superstar-leading-bullet ?\s)
              (setq org-hide-leading-stars nil)
+             (setq org-superstar-headline-bullets-list '("❶" "❷" "❸" "❹" "❺" "❻" "❼" "❽" "❾" "❿"))
              )
-
-; manual hooks because prev doesn't seem to be working
-(add-hook 'org-mode-hook (lambda () (org-superstar-mode)))
-(add-hook 'org-mode-hook (lambda () (message "hi")))
-(add-hook 'org-mode-hook 'org-fragtog-mode)
-(add-hook 'org-mode-hook 'laas-mode)
-
 
 (use-package org-fragtog
              :init

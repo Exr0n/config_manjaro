@@ -1,5 +1,6 @@
 ;; based on ../old_emacs and https://quantumish.github.io/blog/emacsarticle.html
 (load "~/.config/emacs/base.el")
+(load "~/.config/emacs/math-at-point/math-at-point.el")
 
 ;; org + latex
 (require 'org)
@@ -29,7 +30,7 @@
 
 ;; calculations
 (use-package math-at-point
-             :load-path "autoload/math-at-point"
+             :load-path "math-at-point"
              :ensure nil
              :bind ("C-x C-z" . math-at-point))
 
@@ -45,7 +46,7 @@
                                       ;; (yas-expand-snippet "\\( $1 \\)$0"))
                                       (yas-expand-snippet "\$$1\$$0"))
                                ";m" (lambda () (interactive)
-                                      (yas-expand-snippet "\( $1 \)$0"))
+                                      (yas-expand-snippet "\\( $1 \\)$0"))
                                ;; set condition!
                                :cond #'texmathp ; expand only while in math
                                "supp" "\\supp"

@@ -1,3 +1,4 @@
+workspace.showOutput
 clangd.install
 snippets.editSnippets
 snippets.openSnippetFiles

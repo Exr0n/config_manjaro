@@ -60,8 +60,8 @@ bindsym $mod+Ctrl+q    --release exec --no-startup-id  xkill
 # homerow appCtrl
 bindsym $mod+Ctrl+t    --release exec                  $term
 bindsym $mod+Ctrl+n    --release exec                  emacsclient -nc -a="" "$@"
-#bindsym $mod+Ctrl+n    --release exec                  chromium --app=https://ideaflow.app
-bindsym $mod+Ctrl+s    --release exec                  $HOME/.config/dontrun_custom/copy_math_equation.zsh
+bindsym $mod+Ctrl+s    --release exec                  chromium --app=https://ideaflow.app
+#bindsym $mod+Ctrl+s    --release exec                  $HOME/.config/dontrun_custom/copy_math_equation.zsh
 #bindsym $mod+Ctrl+s    --release exec                  neovide --frameless --multiGrid -u $HOME/.config/vimrc ~
 bindsym $mod+Ctrl+h    --release exec                  brave 
 bindsym $mod+Ctrl+d    --release exec                  brave --incognito
@@ -224,6 +224,7 @@ bindsym $mod+Shift+9 move container to workspace $ws19; workspace $ws19
 # assign [class="Skype"] $ws5
 assign [class="discord"] $ws19
 assign [class="drc_autostart"] $ws19
+assign [class="chromium"] scratchpad
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

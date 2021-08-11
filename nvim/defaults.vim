@@ -54,7 +54,7 @@ set mouse=a
 " background and performance
 set lazyredraw " don't redraw when executing macros
 set updatetime=100
-set regexpengine=1 " supposedly makes things faster
+set regexpengine=0 " supposedly makes things faster
 
 " custom keymaps
 let mapleader = " "

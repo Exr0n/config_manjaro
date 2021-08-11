@@ -33,6 +33,7 @@ alias :qa='tmux kill-window'
 # alias nvim='e' # emacs gang # TODO: iosevka, folds, 4 space indent, don't overwrite system clipboard
 alias vim='nvim'
 alias v=nvim
+alias note=nvim -u $XDG_CONFIG_HOME/nvim/notesmode.vim
 #alias v='neovide --frameless --multiGrid'
 #function v {
 #    neovide --frameless --multiGrid $@ &
@@ -197,8 +198,8 @@ alias m='run_generic'
 export FZF_CTRL_T_COMMAND='hypertrav $([[ "${PWD##$HOME}" != "${PWD}" ]] && echo "$HOME" || echo "$PWD")'
 export FZF_DEFAULT_COMMAND='hypertrav'
 
-#    Alias to auto open files with vim
-alias -s {txt,md,cpp,js,mjs,py,properties,yml,yaml}=nvim
+#    Alias to auto open files with vim (suffix aliases)
+alias -s {txt,md,cpp,mjs,py,properties,yml,yaml}=nvim
 alias -s {pdf,html}=ql
 
 #    One off aliases (like config commands)

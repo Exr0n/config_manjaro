@@ -5,9 +5,9 @@ TIMING:
     DOUBLE_TAP_MILLISEC: 100 # what does this even do
 
 MAPPINGS:
-    #- KEY: KEY_LEFTSHIFT
-    #  TAP: KEY_MINUS
-    #  HOLD: KEY_LEFTSHIFT
+    - KEY: KEY_LEFTSHIFT
+      TAP: KEY_MINUS
+      HOLD: KEY_LEFTSHIFT
 
     #- KEY: KEY_RIGHTSHIFT
     #  TAP: KEY_EQUAL

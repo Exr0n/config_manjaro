@@ -9,15 +9,15 @@ alias tsn='ts-node'
 alias trf='ssh exr0n@hop.exr0n.com -p 2222'
 alias pls='sudo'
 alias u='mkdir -p "$CAPSULEROOT/notes" && v "$CAPSULEROOT/notes/$(date +"%Y_%m_%d").md"'
-function mv_confirm {
-    if [[ -f "$([[ -d $2 ]] && echo "$2/$(basename $1)" || echo "$2")" ]]; then
-        echo Destination Exists!
-        return 1
-    else
-        mv $1 $2
-    fi
-}
-alias mv='mv_confirm'
+#function mv_confirm {
+#    if [[ -f "$([[ -d $2 ]] && echo "$2/$(basename $1)" || echo "$2")" ]]; then
+#        echo Destination Exists!
+#        return 1
+#    else
+#        mv $1 $2
+#    fi
+#}
+alias mv='mv -i'
 alias ls='lsd'
 alias du='echo use dust'
 alias df='echo use duf'

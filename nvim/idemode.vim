@@ -164,7 +164,11 @@ set fcs=eob:\   " actually yeet the tildas
 "highlight GitGutterAddIntraLine         ctermbg=NONE guibg=NONE
 "highlight GitGutterDeleteIntraLine      ctermbg=NONE guibg=NONE
 highlight SignColumn                    ctermbg=NONE guibg=NONE
-let g:gitgutter_set_sign_backgrounds = 1
+let g:gitgutter_set_sign_backgrounds = 1    " remove sign-column background color
+highlight CocErrorSign        ctermfg=1       guifg=#ff8080
+highlight CocWarningSign      ctermfg=11      guifg=#ffb378
+highlight CocInfoSign         ctermfg=4       guifg=#91ddff
+highlight CocHintSign         ctermfg=5       guifg=#c991e1
 
 " neovim treesitter config 
 

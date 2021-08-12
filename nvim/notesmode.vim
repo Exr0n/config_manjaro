@@ -3,6 +3,8 @@ source $VIMCONFIG/defaults.vim
 call plug#begin($VIMCONFIG.'/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 
@@ -23,10 +25,10 @@ call plug#end()
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
                 \| exe "normal! g`\"" | endif
+    au BufEnter * set filetype=cucumber
 endif
 
 filetype plugin indent on
-set filetype=cucumber
 
 " hide stuff
 set fcs=eob:\   " actually yeet the tildas
@@ -39,6 +41,12 @@ set list
 
 colo challenger_deep
 highlight Normal        ctermbg=NONE    guibg=NONE
+highlight CocErrorSign        ctermfg=1       guifg=#ff8080
+highlight CocWarningSign      ctermfg=11      guifg=#ffb378
+highlight CocInfoSign         ctermfg=4       guifg=#91ddff
+highlight CocHintSign         ctermfg=5       guifg=#c991e1
+
+
 " TODO: hl group customizations for note taking
 
 

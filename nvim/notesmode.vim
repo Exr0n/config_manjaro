@@ -62,6 +62,10 @@ if has("autocmd")
 endif
 
 nnoremap q: <Nop>
+nnoremap <Leader>r <ESC>:CocRestart<CR>
+nnoremap <Leader>l :CocCommand workspace.showOutput<CR>2<CR>
+nnoremap <Leader>s <C-w>t<C-w>K<C-w>j35<C-w>_
+"nnoremap <Leader>r <ESC>:CocRestart<CR>
 
 " TODO: keybinds, esp for COC
 " Use K to show documentation in preview window.

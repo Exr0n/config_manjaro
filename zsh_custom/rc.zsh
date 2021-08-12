@@ -199,7 +199,7 @@ export FZF_CTRL_T_COMMAND='hypertrav $([[ "${PWD##$HOME}" != "${PWD}" ]] && echo
 export FZF_DEFAULT_COMMAND='hypertrav'
 
 #    Alias to auto open files with vim (suffix aliases)
-alias -s {txt,md,cpp,mjs,py,properties,yml,yaml}=nvim
+alias -s {txt,md,cpp,py,properties,yml,yaml}=nvim
 alias -s {pdf,html}=ql
 alias -s {aloh}=note
 

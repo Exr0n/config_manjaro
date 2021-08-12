@@ -35,16 +35,21 @@ set fcs=eob:\   " actually yeet the tildas
 set noruler
 set noshowmode
 
+set number
+set signcolumn=number
+
 set encoding=utf-8
 set listchars=trail:·,nbsp:▫,extends:>,precedes:<
 set list
 
 colo challenger_deep
-highlight Normal        ctermbg=NONE    guibg=NONE
-highlight CocErrorSign        ctermfg=1       guifg=#ff8080
-highlight CocWarningSign      ctermfg=11      guifg=#ffb378
-highlight CocInfoSign         ctermfg=4       guifg=#91ddff
-highlight CocHintSign         ctermfg=5       guifg=#c991e1
+highlight Normal            ctermbg=NONE    guibg=NONE
+highlight CocErrorSign      ctermfg=1       guifg=#ff8080
+highlight CocWarningSign    ctermfg=11      guifg=#ffb378
+highlight CocInfoSign       ctermfg=4       guifg=#91ddff
+highlight CocHintSign       ctermfg=5       guifg=#c991e1
+"highlight LineNr            ctermfg=0       guifg=#2e2c41   ctermbg=NONE guibg=NONE
+highlight LineNr            ctermfg=0       guifg=#1e1c31   ctermbg=NONE guibg=NONE
 
 
 " TODO: hl group customizations for note taking
@@ -73,7 +78,6 @@ nnoremap q: <Nop>
 nnoremap <Leader>r <ESC>:CocRestart<CR>
 nnoremap <Leader>l :CocCommand workspace.showOutput<CR>2<CR>
 nnoremap <Leader>s <C-w>t<C-w>K<C-w>j35<C-w>_
-"nnoremap <Leader>r <ESC>:CocRestart<CR>
 
 " TODO: keybinds, esp for COC
 " Use K to show documentation in preview window.

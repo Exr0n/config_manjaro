@@ -12,3 +12,5 @@ for projpath in $to_launch; do
         --directory $projpath\
         -e ./start.sh &
 done
+
+./system_setup.zsh

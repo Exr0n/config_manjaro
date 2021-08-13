@@ -343,13 +343,6 @@ exec_always --no-startup-id $HOME/.config/dontrun_custom/rebind_keys.zsh
 exec_always --no-startup-id "echo 1 > /sys/module/hid_apple/parameters/swap_opt_cmd"
 exec_always --no-startup-id "sleep 1; echo 1 > /sys/module/hid_apple/parameters/swap_opt_cmd"
 
-# system
-exec_always --no-startup-id sudo swapon /swapfile
-exec_always --no-startup-id sudo nvidia-smi --id=0 -pm 1
-exec_always --no-startup-id sudo nvidia-smi --id=0 --power-limit=250
-exec_always --no-startup-id sudo nvidia-smi --id=1 -pm 1
-exec_always --no-startup-id sudo nvidia-smi --id=1 --power-limit=250
-
 #exec --no-startup-id "cd ~/projects/Taproot; ./command.sh >> ~/.data/taproot_log.txt 2>&1"
 exec --no-startup-id "$HOME/.config/dontrun_custom/autostart.zsh"
 

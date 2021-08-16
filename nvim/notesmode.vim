@@ -42,18 +42,26 @@ set encoding=utf-8
 set listchars=trail:·,nbsp:▫,extends:>,precedes:<
 set list
 
-colo challenger_deep
-highlight Normal            ctermbg=NONE    guibg=NONE
-highlight CocErrorSign      ctermfg=1       guifg=#ff8080
-highlight CocWarningSign    ctermfg=11      guifg=#ffb378
-highlight CocInfoSign       ctermfg=4       guifg=#91ddff
-highlight CocHintSign       ctermfg=5       guifg=#c991e1
-"highlight LineNr            ctermfg=0       guifg=#2e2c41   ctermbg=NONE guibg=NONE
-highlight LineNr            ctermfg=0       guifg=#1e1c31   ctermbg=NONE guibg=NONE
+if !exists('g:syntax_on')
+    syntax on
+endif
 
+if !exists('g:loaded_color')
+    let g:loaded_color = 1
 
-" TODO: hl group customizations for note taking
-
+    set background=dark
+    " Put your favorite colorscheme here
+    colo challenger_deep
+    highlight Normal            ctermbg=NONE    guibg=NONE
+    highlight CocErrorSign      ctermfg=1       guifg=#ff8080
+    highlight CocWarningSign    ctermfg=11      guifg=#ffb378
+    highlight CocInfoSign       ctermfg=4       guifg=#91ddff
+    highlight CocHintSign       ctermfg=5       guifg=#c991e1
+    "highlight LineNr            ctermfg=0       guifg=#2e2c41   ctermbg=NONE guibg=NONE
+    "highlight LineNr            ctermfg=0       guifg=#1e1c31   ctermbg=NONE guibg=NONE
+    highlight LineNr            ctermfg=0       guifg=#91ddff   ctermbg=NONE guibg=NONE
+    " TODO: hl group customizations for note taking
+endif
 
 " force vim to use true colors (https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be)
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"

@@ -39,6 +39,8 @@ export PATH="$HOME/.config/bin:$PATH"
 # alacritty
 export PATH="$ZSH_CUSTOM/../dontrun_custom/Alacritty.app/Contents/MacOS:$PATH"
 
+# snapcraft
+export PATH="/var/lib/snapd/snap/bin:$PATH"
 
 # compilation include paths
 export CPLUS_INCLUDE_PATH="$XDG_CONFIG_HOME/include/cpp:$C_INCLUDE_PATH"

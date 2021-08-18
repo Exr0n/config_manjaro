@@ -1,17 +1,18 @@
 ```sh
 sudo pacman -S yay
-yay -S rust rustup clang gcc neovim-git emacs-git zsh cmake go nvidia-settings python-pip tk certbot ispell aspell 
+yay -S rust rustup clang gcc neovim-git emacs-git zsh cmake go nvidia-settings tk certbot ispell aspell 
+yay -S snapd python-pip cargo rustup
 yay -S kitty discord telegram slack-desktop okular brave mupdf servo-latest
 yay -S syncthing activitywatch 
 yay -S cuda
 yay -S xautomation xcape xbindkeys interception-dual-function-keys unclutter
-yay -S polybar mpd conky
+yay -S polybar mpd conky picom-git
 yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-iosevka-aile
 yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys manually: https://unix.stackexchange.com/a/617320
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay smartmontools
-yay -S coreutils yarn dnsutils moreutils pdftk colorpicker the_silver_searcher fd hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev zoxide lsd dust duf gping ngrok rm-improved flameshot pv
+yay -S coreutils dnsutils moreutils pdftk colorpicker the_silver_searcher fd hyperfine wget tree ffmpeg fzf unzip xclip tig bat jq entr xorg-xev zoxide lsd dust duf gping ngrok rm-improved flameshot pv
 yay -S lunar-client steam
 yay -S fcitx fcitx-googlepinyin fcitx-im fcitx-configtool
 chsh -s $(which zsh)
@@ -52,8 +53,14 @@ sudo systemctl enable systemd-timesyncd.service
 timedatectl set-ntp true
 timedatectl status # used to check if syncing is enabled
 
+# emacs
 sudo systemctl --user enable emacs.service
 sudo systemctl --user start emacs.service
+
+# snap store
+sudo systemctl enable snapd
+sudo systemctl start snapd
+snap install icloud-for-linux
 
 # uncomplicated firewall (ufw)
 sudo ufw enable

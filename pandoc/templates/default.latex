@@ -110,21 +110,25 @@ $endfor$
 $if(mainfont)$
 \setmainfont{$mainfont$}
 $else$
-\setmainfont{Iosevka Aile Light}
+%\setmainfont{Open Sans}
 %\setmainfont[
 %  ItalicFont      = NimbusSansNarrow,
 %  BoldFont        = NimbusSansBold,
 %  BoldItalicFont  = NimbusSans-BoldItalic]{NimbusSans}
 %\setmainfont[
-%  ItalicFont     = Helvetica-Italic,
+%  ItalicFont     = HelveticaItalic,
 %  BoldFont       = Helvetica-Bold,
 %  BoldItalicFont = Helvetica-BoldItalic]{Helvetica}
+\setmainfont[
+  ItalicFont     = OpenSans-Italic,
+  BoldFont       = OpenSans-Bold,
+  BoldItalicFont = OpenSans-BoldItalic]{OpenSans-Regular}
 %\setmainfont[
 %  ItalicFont     = HelveticaNeue-Italic,
 %  BoldFont       = HelveticaNeue-Bold,
 %  BoldItalicFont = HelveticaNeue-BoldItalic]{HelveticaNeue}
 $endif$
-\newfontfamily\NHLight{Iosevka Aile Thin}
+%\newfontfamily\NHLight{Open Sans Condensed}
 %\newfontfamily\NHLight[
 %  ItalicFont     = Helvetica-LightItalic,
 %  BoldFont       = Helvetica-UltraLight,
@@ -133,6 +137,10 @@ $endif$
 %  ItalicFont     = HelveticaNeue-LightItalic,
 %  BoldFont       = HelveticaNeue-UltraLight,
 %  BoldItalicFont = HelveticaNeue-UltraLightItalic]{HelveticaNeue-Light}
+\newfontfamily\NHLight[
+  ItalicFont     = OpenSans-LightItalic,
+  BoldFont       = OpenSans-Regular,
+  BoldItalicFont = OpenSans-Italic]{OpenSans-Light}
 
 \newcommand\textrmlf[1]{{\NHLight#1}}
 \newcommand\textitlf[1]{{\NHLight\itshape#1}}

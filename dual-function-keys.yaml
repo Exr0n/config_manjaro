@@ -28,6 +28,10 @@ MAPPINGS:
     - KEY: KEY_RIGHTALT
       TAP: KEY_ENTER 
       HOLD: KEY_RIGHTALT
+    
+    - KEY: KEY_LEFTALT
+      TAP: KEY_DELETE
+      HOLD: KEY_LEFTALT
 
     #- KEY: KEY_LEFTMETA
     #  TAP: KEY_BACKSLASH # backslash

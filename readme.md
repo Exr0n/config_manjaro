@@ -8,7 +8,7 @@ yay -S cuda
 yay -S xautomation xcape xbindkeys interception-dual-function-keys unclutter
 yay -S polybar mpd conky picom-git
 yay -S ttf-material-design-icons ttf-iosevka-etoile ttf-iosevka-term-ss12 ttf-iosevka-aile
-yay -S ttf-symbola ttf-unifont # part of previous, ig. May have to import keys manually: https://unix.stackexchange.com/a/617320
+yay -S tff-opensans ttf-symbola ttf-unifont # part of previous, ig. May have to import keys manually: https://unix.stackexchange.com/a/617320
 yay -S pandoc xelatex texlive-most
 yay -S bluez bluez-utils blueman
 yay -S neofetch bottom cmatrix cowsay smartmontools

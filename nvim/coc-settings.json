@@ -12,7 +12,7 @@
     "languageserver": {
         "aloh": {
             "command": "node",
-            "args": ["--max-old-space-size=8192", "/home/exr0n/projects/aloh/aloh-langserv/index.mjs", "--stdio"],
+            "args": ["--experimental-specifier-resolution=node", "/home/exr0n/projects/aloh/aloh-langserv/index.mjs", "--stdio"],
             "trace.server": "verbose",
             "filetypes": ["aloh", "cucumber"]
         }

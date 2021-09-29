@@ -98,5 +98,12 @@ sudo swapon /swapfile # or edit fstab with /swapfile swap swap defaults 0 0
 - load the btusb kernel module (check with `lsmod | ag btusb`, load with `sudo modprobe btusb`)
 - enable it `sudo systemctl enable bluetooth` (apparently might have to off-then-on it in the bios)
 
+## reverse proxy
+Originally handheld by [this scaleway tutorial](https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/).
+```
+yay -S certbot nginx certbot-nginx 
+mkdir /etc/nginx/sites-available /etc/nginx/sites-enabled
+```
+
 # some useful commands
 - Lots of info: `inxi -Fxz`

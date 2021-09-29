@@ -1,7 +1,7 @@
 #!/bin/zsh
 source $XDG_CONFIG_HOME/dontrun_custom/env.zsh
 
-to_launch=( $HOME/projects/corsaurus $HOME/projects/Taproot $HOME/website )
+to_launch=( $HOME/projects/corsaurus $HOME/website )
 
 for projpath in $to_launch; do
     kitty\
@@ -13,4 +13,4 @@ for projpath in $to_launch; do
         -e ./start.sh &
 done
 
-./system_setup.zsh
+sudo ./system_setup.zsh

@@ -20,7 +20,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <C-o> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-imap <C-l> <Plug>(coc-snippets-expand-jump)
+"imap <C-l> <Plug>(coc-snippets-expand-jump)
 let g:coc_snippet_next = 'jn'
 let g:coc_snippet_prev = 'jh'
 

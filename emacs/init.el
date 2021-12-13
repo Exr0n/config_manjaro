@@ -6,7 +6,7 @@
  '(custom-safe-themes
    '("cbdf8c2e1b2b5c15b34ddb5063f1b21514c7169ff20e081d39cf57ffee89bc1e" "835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" default))
  '(package-selected-packages
-   '(org-fragtog org-fragtog-mode org-superstar which-key helpful marginalia ivy-prescient all-the-icons-ivy-rich ivy-rich counsel ivy prescient treemacs-all-the-icons treemacs centaur-tabs solaire-mode doom-modeline all-the-icons doom-themes use-package)))
+   '(undo-tree yasnippet evil-surround rainbow-delimiters evil-collection evil org-preview-html laas org-fragtog org-fragtog-mode org-superstar which-key helpful marginalia ivy-prescient all-the-icons-ivy-rich ivy-rich counsel ivy prescient treemacs-all-the-icons treemacs centaur-tabs solaire-mode doom-modeline all-the-icons doom-themes use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -18,7 +18,10 @@
  '(org-level-4 ((t (:inherit outline-4 :height 1.5))))
  '(org-level-5 ((t (:inherit outline-5 :height 1.0)))))
 
-(evil-set-undo-system 'undo-tree)
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode)
+  (evil-set-undo-system 'undo-tree))
 
 (load "~/.config/emacs/write.el")
 

@@ -23,10 +23,14 @@
              (setq org-superstar-headline-bullets-list '("❶" "❷" "❸" "❹" "❺" "❻" "❼" "❽" "❾" "❿"))
              )
 
-(use-package org-fragtog
-             :init
-             (add-hook 'org-mode-hook 'org-fragtog-mode))
+;; (use-package org-fragtog
+;;              :init
+;;              (add-hook 'org-mode-hook 'org-fragtog-mode))
 
+(use-package org-preview-html
+  :config
+  (setq org-preview-html-refresh-configuration "timer")
+  )
 
 ;; calculations
 (use-package math-at-point
@@ -38,6 +42,36 @@
              :config ; do whatever here
              (add-hook 'org-mode-hook 'laas-mode)
              (aas-set-snippets 'laas-mode
+			       ;; tikz snippets
+			       ":Z" (lambda () (interactive)
+				      (yas-expand-snippet "\n\\begin{tikzpicture}\n    $1\n\\end{tikzpicture}\n\n"))
+
+			       ",,d " (lambda () (interactive)
+					(yas-expand-snippet "\\draw[$1] ($2, $3) -- ($4, $5)"))
+			       ",,dd " (lambda () (interactive)
+					(yas-expand-snippet "\\draw[black, thick] ($1, $2) -- ($3, $4)"))
+			       ",,da " (lambda () (interactive)
+					(yas-expand-snippet "\\draw[black, thick, ->] ($1, $2) -- ($3, $4)"))
+			       ",,nt " (lambda () (interactive) (yas-expand-snippet "node[above] {\$$2\$}"))
+			       ",,nb " (lambda () (interactive) (yas-expand-snippet "node[below] {\$$2\$}"))
+			       ",,nr " (lambda () (interactive) (yas-expand-snippet "node[right] {\$$2\$}"))
+			       ",,nl " (lambda () (interactive) (yas-expand-snippet "node[left] {\$$2\$}"))
+
+			       ",,ntr " (lambda () (interactive) (yas-expand-snippet "node[above right] {\$$2\$}"))
+			       ",,ntl " (lambda () (interactive) (yas-expand-snippet "node[above left] {\$$2\$}"))
+			       ",,nbr " (lambda () (interactive) (yas-expand-snippet "node[below right] {\$$2\$}"))
+			       ",,nbl " (lambda () (interactive) (yas-expand-snippet "node[below left] {\$$2\$}"))
+
+			       ",,nmt " (lambda () (interactive) (yas-expand-snippet "node[midway, above] {\$$2\$}"))
+			       ",,nmb " (lambda () (interactive) (yas-expand-snippet "node[midway, below] {\$$2\$}"))
+			       ",,nmr " (lambda () (interactive) (yas-expand-snippet "node[midway, right] {\$$2\$}"))
+			       ",,nml " (lambda () (interactive) (yas-expand-snippet "node[midway, left] {\$$2\$}"))
+
+			       ",,nmtr " (lambda () (interactive) (yas-expand-snippet "node[midway, above right] {\$$2\$}"))
+			       ",,nmtl " (lambda () (interactive) (yas-expand-snippet "node[midway, above left] {\$$2\$}"))
+			       ",,nmbr " (lambda () (interactive) (yas-expand-snippet "node[midway, below right] {\$$2\$}"))
+			       ",,nmbl " (lambda () (interactive) (yas-expand-snippet "node[midway, below left] {\$$2\$}"))
+			       ;; create boxes and things
                                ":B" (lambda () (interactive)
                                       (yas-expand-snippet "\\boxed{\\text{$1}}$0"))
                                ":M" (lambda () (interactive)

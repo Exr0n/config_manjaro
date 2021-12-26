@@ -42,6 +42,7 @@ alias note='nvim -u $XDG_CONFIG_HOME/nvim/notesmode.vim'
 alias compile_org_to_pdf='pandoc -s *.org -o export.pdf --pdf-engine=xelatex --lua-filter=$HOME/.pandoc/filters/org_directives_to_metadata.lua && mupdf export.pdf'
 #    git
 alias gpl='git pull'
+alias grhhhh='git reset --hard HEAD^'
 function gpext {
     nohup git push "$@" > /dev/null &
 }

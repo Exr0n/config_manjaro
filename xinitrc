@@ -46,6 +46,7 @@ xset +fp /usr/share/fonts/local,/usr/share/fonts/TTF
 # backgroundd
 #feh --bg-center ~/snap/kitten-440379.jpg
 #feh --bg-fill --no-xinerama ~/snap/background.jpg
+feh --bg-fill --no-xinerama ~/.config/wallpaper.jpg
 /home/exr0n/projects/backdash/backdash &
 
 #sudo dmesg -w > "/home/exr0n/vol/storage/archive/dmesg_logs/$(date -Is).txt" &

@@ -7,3 +7,6 @@
 [submodule "emacs/math-at-point"]
 	path = emacs/math-at-point
 	url = https://github.com/shankar2k/math-at-point.git
+[submodule "ranger/plugins/ranger-zoxide"]
+	path = ranger/plugins/ranger-zoxide
+	url = git@github.com:jchook/ranger-zoxide.git

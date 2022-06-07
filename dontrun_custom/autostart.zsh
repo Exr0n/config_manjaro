@@ -1,7 +1,7 @@
 #!/bin/zsh
 source $XDG_CONFIG_HOME/dontrun_custom/env.zsh
 
-to_launch=( $HOME/projects/corsaurus $HOME/website )
+to_launch=( $HOME/projects/corsaurus $HOME/website $HOME/vol/storage/model_support/hq3 )
 
 for projpath in $to_launch; do
     kitty\

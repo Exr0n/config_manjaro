@@ -93,6 +93,7 @@ sudo swapon /swapfile # or edit fstab with /swapfile swap swap defaults 0 0
 
 ## slash etc
 - fstab! see dontrun_custom/fstab to /etc/fstab
+- increase maximum client limit in xserver (alacritty uses 5 x11 clients per terminal), see [this issue](https://github.com/alacritty/alacritty/issues/2735#issuecomment-537462804).
 
 ## bluetooth
 - load the btusb kernel module (check with `lsmod | ag btusb`, load with `sudo modprobe btusb`)

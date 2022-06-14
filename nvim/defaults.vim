@@ -73,6 +73,7 @@ xmap <Leader>y :w !xsel --clipboard --input<CR><CR>
 nmap <Leader>y :w !xsel --clipboard --input<CR><CR>
 
 inoremap <C-f> <Right>
+nnoremap ZW :w<CR>
 
 " easymotion
 nmap x <Plug>(easymotion-overwin-f2)

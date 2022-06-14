@@ -20,6 +20,10 @@ Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'jiangmiao/auto-pairs'
+let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutFastWrap = ''
+let g:AutoPairsShortcutJump = ''
+let g:AutoPairsShortcutBackInsert = ''
 Plug 'alvan/vim-closetag' " autopairs for html tags
 
 "Plug 'tpope/vim-fugitive'
